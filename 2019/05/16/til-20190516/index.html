@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793    2. Math.random두 정수 min,">
+    <meta name="description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793">
 <meta name="keywords" content="TIL,JavaScript,Math.PI,Math.random,Math.ceil,toString,String.substring,String.replace,String.indexOf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="API사용 연습문제">
 <meta property="og:url" content="https://GoodSungJin.github.io/2019/05/16/til-20190516/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793    2. Math.random두 정수 min,">
+<meta property="og:description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
-<meta property="og:updated_time" content="2019-06-07T11:18:28.224Z">
+<meta property="og:updated_time" content="2019-06-09T04:46:32.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="API사용 연습문제">
-<meta name="twitter:description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793    2. Math.random두 정수 min,">
+<meta name="twitter:description" content="1. Math.PI양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요. 12345function circleArea(n) &amp;#123;  return (n ** 2) * Math.PI;&amp;#125;console.log(circleArea(10)); // 314.1592653589793">
 <meta name="twitter:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
 
 
@@ -154,7 +154,7 @@
                 <time class="level-item has-text-grey" datetime="2019-05-15T15:00:00.000Z">2019-05-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                 </div>
                 
                 
@@ -175,39 +175,39 @@
         </h1>
         <div class="content">
             <h1 id="1-Math-PI"><a href="#1-Math-PI" class="headerlink" title="1. Math.PI"></a>1. Math.PI</h1><p>양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">circleArea</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (n ** <span class="number">2</span>) * <span class="built_in">Math</span>.PI;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(circleArea(<span class="number">10</span>)); <span class="comment">// 314.1592653589793</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h1 id="2-Math-random"><a href="#2-Math-random" class="headerlink" title="2. Math.random"></a>2. Math.random</h1><p>두 정수 min, max 를 입력받아, min 이상 max 미만인 임의의 정수를 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minToMax</span>(<span class="params">min, max</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sub = max - min;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor((<span class="built_in">Math</span>.random() * sub) + min);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(minToMax(<span class="number">2</span>, <span class="number">8</span>)); <span class="comment">// 2 ~ 7 중 랜덤의 수</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">circleArea</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> (n ** <span class="hljs-number">2</span>) * <span class="hljs-built_in">Math</span>.PI;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(circleArea(<span class="hljs-number">10</span>)); <span class="hljs-comment">// 314.1592653589793</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <a id="more"></a>
 
+<h1 id="2-Math-random"><a href="#2-Math-random" class="headerlink" title="2. Math.random"></a>2. Math.random</h1><p>두 정수 min, max 를 입력받아, min 이상 max 미만인 임의의 정수를 반환하는 함수를 작성하세요.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">minToMax</span>(<span class="hljs-params">min, max</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> sub = max - min;</span><br><span class="line">    </span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor((<span class="hljs-built_in">Math</span>.random() * sub) + min);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(minToMax(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>)); <span class="hljs-comment">// 2 ~ 7 중 랜덤의 수</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
 <h1 id="3-Math-ceil"><a href="#3-Math-ceil" class="headerlink" title="3. Math.ceil"></a>3. Math.ceil</h1><p>정수를 입력받아, 5 단위로 올림한 수를 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 처음 생각한 방법</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ceilBy5</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> i = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">while</span> ((n % <span class="number">5</span>) !== <span class="number">0</span>) &#123;</span><br><span class="line">    n += i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">30</span>)); <span class="comment">// 30</span></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">32</span>)); <span class="comment">// 35</span></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">37</span>)); <span class="comment">// 40</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 강사님의 의도</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ceilby5</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(num / <span class="number">5</span>) * <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">30</span>)); <span class="comment">// 30</span></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">32</span>)); <span class="comment">// 35</span></span><br><span class="line"><span class="built_in">console</span>.log(ceilBy5(<span class="number">37</span>)); <span class="comment">// 40</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 처음 생각한 방법</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ceilBy5</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> i = <span class="hljs-number">1</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="hljs-keyword">while</span> ((n % <span class="hljs-number">5</span>) !== <span class="hljs-number">0</span>) &#123;</span><br><span class="line">    n += i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="hljs-keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">30</span>)); <span class="hljs-comment">// 30</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">32</span>)); <span class="hljs-comment">// 35</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">37</span>)); <span class="hljs-comment">// 40</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 강사님의 의도</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ceilby5</span>(<span class="hljs-params">num</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.ceil(num / <span class="hljs-number">5</span>) * <span class="hljs-number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">30</span>)); <span class="hljs-comment">// 30</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">32</span>)); <span class="hljs-comment">// 35</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(ceilBy5(<span class="hljs-number">37</span>)); <span class="hljs-comment">// 40</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h1 id="4-toString"><a href="#4-toString" class="headerlink" title="4. toString"></a>4. toString</h1><p>임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 처음 생각한 방법</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hexNumber</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hexString</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">String</span>.fromCharCode(<span class="built_in">Math</span>.floor((<span class="built_in">Math</span>.random() * <span class="number">5</span>) + <span class="number">65</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">random</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">htmlHexCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="string">'#'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> reload = [hexNumber(), hexString()];</span><br><span class="line">    result += reload[random()];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(htmlHexCode()); <span class="comment">// #92F01A</span></span><br><span class="line"><span class="built_in">console</span>.log(htmlHexCode()); <span class="comment">// #00FF12</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 강사님의 의도</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">htmlHexCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="string">'#'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">    result += <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">16</span>).toString(<span class="number">16</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(htmlHexCode()); <span class="comment">// #92F01A</span></span><br><span class="line"><span class="built_in">console</span>.log(htmlHexCode()); <span class="comment">// #00FF12</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 처음 생각한 방법</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hexNumber</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hexString</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">String</span>.fromCharCode(<span class="hljs-built_in">Math</span>.floor((<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">5</span>) + <span class="hljs-number">65</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">random</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">htmlHexCode</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-string">'#'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">6</span>; i++) &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> reload = [hexNumber(), hexString()];</span><br><span class="line">    result += reload[random()];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(htmlHexCode()); <span class="hljs-comment">// #92F01A</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(htmlHexCode()); <span class="hljs-comment">// #00FF12</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 강사님의 의도</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">htmlHexCode</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-string">'#'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">6</span>; i++) &#123;</span><br><span class="line">    result += <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">16</span>).toString(<span class="hljs-number">16</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> result.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(htmlHexCode()); <span class="hljs-comment">// #92F01A</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(htmlHexCode()); <span class="hljs-comment">// #00FF12</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h1 id="5-Math-random-number"><a href="#5-Math-random-number" class="headerlink" title="5. Math.random() * number"></a>5. Math.random() * number</h1><p>rgb색상코드를 랜덤으로 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomRgbCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">randomNumber</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">256</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`rgb(<span class="subst">$&#123;randomNumber()&#125;</span>, <span class="subst">$&#123;randomNumber()&#125;</span>, <span class="subst">$&#123;randomNumber()&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(randomRgbCode()); <span class="comment">// rgb(123, 44, 254);</span></span><br><span class="line"><span class="built_in">console</span>.log(randomRgbCode()); <span class="comment">// rgb(12, 3, 223);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">randomRgbCode</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">randomNumber</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`rgb(<span class="hljs-subst">$&#123;randomNumber()&#125;</span>, <span class="hljs-subst">$&#123;randomNumber()&#125;</span>, <span class="hljs-subst">$&#123;randomNumber()&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(randomRgbCode()); <span class="hljs-comment">// rgb(123, 44, 254);</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(randomRgbCode()); <span class="hljs-comment">// rgb(12, 3, 223);</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h1 id="6-String-substring-String-indexOf"><a href="#6-String-substring-String-indexOf" class="headerlink" title="6. String.substring, String.indexOf"></a>6. String.substring, String.indexOf</h1><p>소수인 숫자와, 자릿수를 받아서 소수를 자리수만큼만 자른 뒤 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fixFloat</span>(<span class="params">num, a</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> str = num + <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> str.substring(<span class="number">0</span>, str.indexOf(<span class="string">'.'</span>) + a + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fixFloat(<span class="number">10.12345</span>, <span class="number">2</span>); <span class="comment">// 10.12</span></span><br><span class="line">fixFloat(<span class="number">15.5678</span>, <span class="number">1</span>); <span class="comment">// 15.5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fixFloat</span>(<span class="hljs-params">num, a</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> str = num + <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> str.substring(<span class="hljs-number">0</span>, str.indexOf(<span class="hljs-string">'.'</span>) + a + <span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fixFloat(<span class="hljs-number">10.12345</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 10.12</span></span><br><span class="line">fixFloat(<span class="hljs-number">15.5678</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 15.5</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h1 id="7-String-replace"><a href="#7-String-replace" class="headerlink" title="7. String.replace"></a>7. String.replace</h1><p>Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">camelToSnake</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (str[i] !== str[i].toUpperCase()) &#123;</span><br><span class="line">    i += <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> newStr = str.replace(str[i], <span class="string">`_<span class="subst">$&#123;str[i]&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> newStr.toLowerCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(camelToSnake(<span class="string">'helloWorld'</span>)); <span class="comment">// 'hello_world'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">camelToSnake</span>(<span class="hljs-params">str</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span> (str[i] !== str[i].toUpperCase()) &#123;</span><br><span class="line">    i += <span class="hljs-number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> newStr = str.replace(str[i], <span class="hljs-string">`_<span class="hljs-subst">$&#123;str[i]&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> newStr.toLowerCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(camelToSnake(<span class="hljs-string">'helloWorld'</span>)); <span class="hljs-comment">// 'hello_world'</span></span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,16 +234,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/05/til-20190605/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/17/til-20190517/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">til_20190605</span>
+                <span class="level-item">러버덕, 연습문제</span>
             </a>
         </div>
         
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/15/til-20190515/">
-                <span class="level-item">this</span>
+                <span class="level-item">러버덕, this, 연습문제</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -305,7 +305,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        5
                     </p>
                 </div>
             </div>
@@ -315,7 +315,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        33
+                        56
                     </p>
                 </div>
             </div>
@@ -418,7 +418,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">35</span>
+                <span class="level-item tag">19</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/">
@@ -426,7 +426,7 @@
                 <span class="level-item">TIL</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">47</span>
+                <span class="level-item tag">37</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/TIL/HTML-CSS/">
@@ -434,7 +434,7 @@
                 <span class="level-item">HTML & CSS</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/JavaScript/">
@@ -442,7 +442,7 @@
                 <span class="level-item">JavaScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">43</span>
+                <span class="level-item tag">23</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/컴퓨터공학/">
@@ -450,7 +450,7 @@
                 <span class="level-item">컴퓨터공학</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -464,7 +464,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/CSS/" style="font-size: 16px;">CSS</a> <a href="/tags/HTML/" style="font-size: 16px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 12px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 12px;">변수</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 12px;">예습</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 14.44px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 16.67px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 13.33px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 15.56px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -481,18 +481,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-two-sum/" class="media-left">
+            <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_two-sum">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:23.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-two-sum/" class="has-link-black-ter is-size-6">algorithm_leetcode_two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -500,18 +500,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-reverse-integer/" class="media-left">
+            <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_reverse-integer">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:16.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-reverse-integer/" class="has-link-black-ter is-size-6">algorithm_leetcode_reverse-integer</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -519,18 +519,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-longest-common-prefix/" class="media-left">
+            <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_longest-common-prefix">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:08.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-longest-common-prefix/" class="has-link-black-ter is-size-6">algorithm_leetcode_longest-common-prefix</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -538,18 +538,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-codewars-take-a-number/" class="media-left">
+            <a href="/2019/05/31/til-20190531/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_codewars_take_a_number">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:23:59.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-codewars-take-a-number/" class="has-link-black-ter is-size-6">algorithm_codewars_take_a_number</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
+                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -557,18 +557,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-codewars-playing-with-digits/" class="media-left">
+            <a href="/2019/05/29/til-20190529/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_codewars_playing-with-digits">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:23:51.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-codewars-playing-with-digits/" class="has-link-black-ter is-size-6">algorithm_codewars_playing-with-digits</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
+                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -592,7 +592,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">35</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -603,7 +603,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">21</span>
                 </span>
             </a>
         </li>
@@ -614,7 +614,18 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -633,30 +644,86 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Ajax/">
+                        <span class="tag">Ajax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">35</span>
+                        <span class="tag is-grey">18</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bubble-Sort/">
+                        <span class="tag">Bubble Sort</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Codewars/">
+                        <span class="tag">Codewars</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Flex/">
+                        <span class="tag">Flex</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Form/">
+                        <span class="tag">Form</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Insertion-Sort/">
+                        <span class="tag">Insertion Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JSON/">
+                        <span class="tag">JSON</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/LeetCode/">
+                        <span class="tag">LeetCode</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -677,6 +744,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Math-random/">
                         <span class="tag">Math.random</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Merge-Sort/">
+                        <span class="tag">Merge Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Selection-Sort/">
+                        <span class="tag">Selection Sort</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -705,7 +786,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">48</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
@@ -745,8 +826,29 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/개념정리/">
+                        <span class="tag">개념정리</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체/">
+                        <span class="tag">객체</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/객체-리터럴/">
                         <span class="tag">객체 리터럴</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/고차함수/">
+                        <span class="tag">고차함수</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -768,7 +870,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/러버덕/">
                         <span class="tag">러버덕</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -787,8 +889,36 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/변수의-생명주기/">
+                        <span class="tag">변수의 생명주기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/별찍기/">
+                        <span class="tag">별찍기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/복습/">
                         <span class="tag">복습</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/생성자-함수/">
+                        <span class="tag">생성자 함수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/스코프/">
+                        <span class="tag">스코프</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -818,6 +948,13 @@
                     <a class="tags has-addons" href="/tags/예습/">
                         <span class="tag">예습</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/원시-값/">
+                        <span class="tag">원시 값</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -859,6 +996,41 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/조건문/">
                         <span class="tag">조건문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터공학/">
+                        <span class="tag">컴퓨터공학</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/클래스/">
+                        <span class="tag">클래스</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/키워드/">
+                        <span class="tag">키워드</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/프로토타입/">
+                        <span class="tag">프로토타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/함수/">
+                        <span class="tag">함수</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -888,18 +1060,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-two-sum/" class="media-left">
+            <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_two-sum">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:23.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-two-sum/" class="has-link-black-ter is-size-6">algorithm_leetcode_two-sum</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -907,18 +1079,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-reverse-integer/" class="media-left">
+            <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_reverse-integer">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:16.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-reverse-integer/" class="has-link-black-ter is-size-6">algorithm_leetcode_reverse-integer</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -926,18 +1098,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-leetcode-longest-common-prefix/" class="media-left">
+            <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_leetcode_longest-common-prefix">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:24:08.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-leetcode-longest-common-prefix/" class="has-link-black-ter is-size-6">algorithm_leetcode_longest-common-prefix</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -945,18 +1117,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-codewars-take-a-number/" class="media-left">
+            <a href="/2019/05/31/til-20190531/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_codewars_take_a_number">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:23:59.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-codewars-take-a-number/" class="has-link-black-ter is-size-6">algorithm_codewars_take_a_number</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
+                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -964,18 +1136,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/07/algorithm-codewars-playing-with-digits/" class="media-left">
+            <a href="/2019/05/29/til-20190529/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="algorithm_codewars_playing-with-digits">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T02:23:51.000Z">2019-06-07</time></div>
-                    <a href="/2019/06/07/algorithm-codewars-playing-with-digits/" class="has-link-black-ter is-size-6">algorithm_codewars_playing-with-digits</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
+                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -999,7 +1171,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">35</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1010,7 +1182,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">21</span>
                 </span>
             </a>
         </li>
@@ -1021,7 +1193,18 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1040,30 +1223,86 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Ajax/">
+                        <span class="tag">Ajax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">35</span>
+                        <span class="tag is-grey">18</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bubble-Sort/">
+                        <span class="tag">Bubble Sort</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Codewars/">
+                        <span class="tag">Codewars</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Flex/">
+                        <span class="tag">Flex</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Form/">
+                        <span class="tag">Form</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Insertion-Sort/">
+                        <span class="tag">Insertion Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JSON/">
+                        <span class="tag">JSON</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/LeetCode/">
+                        <span class="tag">LeetCode</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1084,6 +1323,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Math-random/">
                         <span class="tag">Math.random</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Merge-Sort/">
+                        <span class="tag">Merge Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Selection-Sort/">
+                        <span class="tag">Selection Sort</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1112,7 +1365,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">48</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
@@ -1152,8 +1405,29 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/개념정리/">
+                        <span class="tag">개념정리</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체/">
+                        <span class="tag">객체</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/객체-리터럴/">
                         <span class="tag">객체 리터럴</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/고차함수/">
+                        <span class="tag">고차함수</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1175,7 +1449,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/러버덕/">
                         <span class="tag">러버덕</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1194,8 +1468,36 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/변수의-생명주기/">
+                        <span class="tag">변수의 생명주기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/별찍기/">
+                        <span class="tag">별찍기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/복습/">
                         <span class="tag">복습</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/생성자-함수/">
+                        <span class="tag">생성자 함수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/스코프/">
+                        <span class="tag">스코프</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1225,6 +1527,13 @@
                     <a class="tags has-addons" href="/tags/예습/">
                         <span class="tag">예습</span>
                         <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/원시-값/">
+                        <span class="tag">원시 값</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1266,6 +1575,41 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/조건문/">
                         <span class="tag">조건문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터공학/">
+                        <span class="tag">컴퓨터공학</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/클래스/">
+                        <span class="tag">클래스</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/키워드/">
+                        <span class="tag">키워드</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/프로토타입/">
+                        <span class="tag">프로토타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/함수/">
+                        <span class="tag">함수</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

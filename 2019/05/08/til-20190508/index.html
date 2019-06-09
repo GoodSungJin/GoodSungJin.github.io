@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>러버덕, 원시 값, 객체, 함수, 스코프 - Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="아침 러버덕 명시적 / 암묵적 타입변환  명시적 타입변환 : 개발자가 의도적으로 타입을 변환하는 것.  암묵적 타입변환 : 자바스크립트 엔진에 의해 타입이 변환되는 것.     내 생각 : 메서드의 사용여부가 명시적 / 암묵적을 나누는 것 같음.  단축평가(&amp;amp;&amp;amp;, ||)  &amp;amp;&amp;amp;(and, 논리 곱) : 두개의 피연산자가 모두 tr">
+<meta name="keywords" content="TIL,JavaScript,러버덕,원시 값,객체,함수,스코프">
+<meta property="og:type" content="article">
+<meta property="og:title" content="러버덕, 원시 값, 객체, 함수, 스코프">
+<meta property="og:url" content="https://GoodSungJin.github.io/2019/05/08/til-20190508/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="아침 러버덕 명시적 / 암묵적 타입변환  명시적 타입변환 : 개발자가 의도적으로 타입을 변환하는 것.  암묵적 타입변환 : 자바스크립트 엔진에 의해 타입이 변환되는 것.     내 생각 : 메서드의 사용여부가 명시적 / 암묵적을 나누는 것 같음.  단축평가(&amp;amp;&amp;amp;, ||)  &amp;amp;&amp;amp;(and, 논리 곱) : 두개의 피연산자가 모두 tr">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
+<meta property="og:updated_time" content="2019-06-09T03:10:09.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="러버덕, 원시 값, 객체, 함수, 스코프">
+<meta name="twitter:description" content="아침 러버덕 명시적 / 암묵적 타입변환  명시적 타입변환 : 개발자가 의도적으로 타입을 변환하는 것.  암묵적 타입변환 : 자바스크립트 엔진에 의해 타입이 변환되는 것.     내 생각 : 메서드의 사용여부가 명시적 / 암묵적을 나누는 것 같음.  단축평가(&amp;amp;&amp;amp;, ||)  &amp;amp;&amp;amp;(and, 논리 곱) : 두개의 피연산자가 모두 tr">
+<meta name="twitter:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/darkula.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="러버덕, 원시 값, 객체, 함수, 스코프" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="러버덕, 원시 값, 객체, 함수, 스코프">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-07T15:00:00.000Z">2019-05-08</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    17분 읽기 (나에 대하여 2495 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                러버덕, 원시 값, 객체, 함수, 스코프
+            
+        </h1>
+        <div class="content">
+            <h1 id="아침-러버덕"><a href="#아침-러버덕" class="headerlink" title="아침 러버덕"></a>아침 러버덕</h1><ol>
+<li><p>명시적 / 암묵적 타입변환</p>
+<ul>
+<li><p>명시적 타입변환 : 개발자가 의도적으로 타입을 변환하는 것.</p>
+</li>
+<li><p>암묵적 타입변환 : 자바스크립트 엔진에 의해 타입이 변환되는 것.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>내 생각 : 메서드의 사용여부가 명시적 / 암묵적을 나누는 것 같음.</p>
+<ol start="2">
+<li><p>단축평가(&amp;&amp;, ||)</p>
+<ul>
+<li><code>&amp;&amp;</code>(and, 논리 곱) : 두개의 피연산자가 모두 true일 경우 true를 반환한다. </li>
+<li><code>||</code>(or, 논리 합) : 두개의 피연산자 중 하나만 true이면, true를 반환한다.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">'cat'</span> &amp;&amp; <span class="hljs-string">'dog'</span>	<span class="hljs-comment">// 'dog'</span></span><br><span class="line"><span class="hljs-literal">false</span> &amp;&amp; <span class="hljs-string">'cat'</span>	<span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-string">'dog'</span> &amp;&amp; <span class="hljs-literal">false</span>	<span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-string">''</span> &amp;&amp; <span class="hljs-literal">false</span>		<span class="hljs-comment">// 좌항을 반환한다.</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-string">'cat'</span> || <span class="hljs-string">'dog'</span>	<span class="hljs-comment">// 좌항을 반환한다.</span></span><br><span class="line"><span class="hljs-literal">false</span> || <span class="hljs-string">'dog'</span>	<span class="hljs-comment">// 'dog'</span></span><br><span class="line"><span class="hljs-literal">false</span> || <span class="hljs-literal">false</span>	<span class="hljs-comment">// 좌항을 반환한다.</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>자바스크립트에서의 객체란 무엇인가?</p>
+<p>키(key)과 값(value)으로 구성된 프로퍼티(Property)들의 집합이고, 변경 가능한 값(mutable value)이다.</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>자바스크립트 객체 프로퍼티 여러 접근 방법</p>
+<p>마침표 표기법과 대괄호 표기법이있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">person.name;</span><br><span class="line"></span><br><span class="line">person[<span class="hljs-string">'name'</span>];</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<a id="more"></a>
+
+<br>
+
+<hr>
+<br>
+
+<h1 id="1-원시-값"><a href="#1-원시-값" class="headerlink" title="1. 원시 값"></a>1. 원시 값</h1><p>원시 타입의 값은 변경 불가능한 값(immutable value)이다. 여기서 변경 불가능한 값은 상수와는 다른 개념이다.</p>
+<p>원시 값의 장점은 재할당 이외에는 절대 값이 바뀌지 않아, 비교적 오류를 범하지 않을 수 있다.</p>
+<blockquote>
+<p>변수 : 재할당이 가능하다.</p>
+<p>상수 : 재할당이 불가능하다.</p>
+</blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 원시 값</span></span><br><span class="line"><span class="hljs-keyword">var</span> score;	<span class="hljs-comment">// 변수를 선언하고 undefined를 할당한다.</span></span><br><span class="line">score = <span class="hljs-number">30</span>;	<span class="hljs-comment">// undefined가 들어있는 메모리 공간과는 별개로 새로운 공간에 30을 생성하고 할당한다.</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="1-1-값에-의한-전달"><a href="#1-1-값에-의한-전달" class="headerlink" title="1.1. 값에 의한 전달"></a>1.1. 값에 의한 전달</h2><p>위에서 할당한 변수는 원시 타입이다. 변수 <code>foo</code>와 <code>bar</code>는 전혀 다른 메모리에 별개로 저장되어 할당한 변수값이 복사되어 전달된다. 이를 값에 의한 전달(Pass by value)라 한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> foo = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> bar = foo;</span><br><span class="line"></span><br><span class="line">foo = <span class="hljs-number">100</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(bar);	<span class="hljs-comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<h1 id="2-객체"><a href="#2-객체" class="headerlink" title="2. 객체"></a>2. 객체</h1><p>객체는 프로퍼티의 개수가 정해져 있지 않으며 동적으로 추가되고 삭제할 수 있다. 객체는 복합적인 자료 구조이므로 객체를 관리하는 방식이 원시 값과 비교하여 매우 복잡하고 비용이 많이 든다. 때문에, 객체가 뮤터블인이유이다</p>
+<p>객체는 순서 개념이 없다. key 즉, name으로 값을 찾는다.</p>
+<br>
+
+<h2 id="2-1-변경-가능한-값"><a href="#2-1-변경-가능한-값" class="headerlink" title="2.1. 변경 가능한 값"></a>2.1. 변경 가능한 값</h2><p>원시 값을 할당한 변수는 원시 값 자체를 값으로 갖는다. 하지만, 객체를 할당한 변수는 <strong>참조 값(Reference value)</strong>을 값으로 갖는다. 참조 값은 생성된 객체가 저장된 메모리 공간의 주소, 그 자체이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> person = &#123;</span><br><span class="line">    name: <span class="hljs-string">'lee'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 프로퍼티 값 갱신</span></span><br><span class="line">person.name = <span class="hljs-string">'kim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 프로퍼티 동적 추가</span></span><br><span class="line">person.address = <span class="hljs-string">'seoul'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(person);	<span class="hljs-comment">// &#123;name: 'kim', address: 'seoul'&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="2-2-참조에-의한-전달"><a href="#2-2-참조에-의한-전달" class="headerlink" title="2.2. 참조에 의한 전달"></a>2.2. 참조에 의한 전달</h2><p>person의 참조값을 copy에 복사해서 전달한다. 이를 <strong>참조에 의한 전달(Pass by reference)</strong>이라 한다. 같은 메모리 주소 값을 변수 값으로 가지고 있어서 같은 메모리 공간을 참조하고 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> person = &#123;</span><br><span class="line">    name: <span class="hljs-string">'lee'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 참조 값을 복사</span></span><br><span class="line"><span class="hljs-keyword">var</span> copy = person;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>얕은 복사(shallow copy)와 깊은 복사(deep copy)</strong></p>
+<p>참조 값을 복사하는 것을 얕은 복사(shallow copy), 원시 값처럼 객체 자체를 복사하여 다시 생성하는 것을 깊은 복사(deep copy)라 한다.</p>
+</blockquote>
+<br>
+
+<hr>
+<h1 id="3-함수"><a href="#3-함수" class="headerlink" title="3. 함수"></a>3. 함수</h1><p>함수는 일련의 과정을 문(statement)들로 구현하고 코드 블록으로 감싸서 하나의 실행 단위로 정의한 것이다. 여기서 함수는 객체이기도 하다.</p>
+<p>함수는 정의만으로 실행되지 않는다. 인수를 매개변수를 통해 함수에게 전달한다. 이를 <strong>함수 호출</strong>이라한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 함수 정의</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>)</span>&#123;	<span class="hljs-comment">// add : 함수명	x, y : 매개변수</span></span><br><span class="line">    <span class="hljs-keyword">return</span> x + y;	<span class="hljs-comment">// &#123;&#125; : 함수 몸체</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 함수 호출</span></span><br><span class="line">add(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>);	<span class="hljs-comment">// 인수</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h2 id="3-1-함수의-사용-이유"><a href="#3-1-함수의-사용-이유" class="headerlink" title="3.1. 함수의 사용 이유"></a>3.1. 함수의 사용 이유</h2><p>함수를 사용하는 이유는 <strong>코드의 재사용</strong>에 있다. 재사용이 주는 이점은 <strong>유지보수의 편의성을 높여 실수를 줄이고 코드의 신뢰성을 높인다.</strong></p>
+<br>
+
+
+
+<h2 id="3-3-함수-선언문"><a href="#3-3-함수-선언문" class="headerlink" title="3.3. 함수 선언문"></a>3.3. 함수 선언문</h2><p>변수 선언문을 사용하지 않은 함수 리터럴이고, <strong>함수명을 생략할 수 없다</strong>. </p>
+<p>함수 선언문은 선언과 초기화가 한 번에 해결된다.(함수 호이스팅)</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 함수 선언문</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> x + y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 자바스크립트 엔진이 런타임 이전에 함수명과 동일한 변수를 선언하고 할당한다.</span></span><br><span class="line"><span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> x + y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="3-4-함수-표현식"><a href="#3-4-함수-표현식" class="headerlink" title="3.4. 함수 표현식"></a>3.4. 함수 표현식</h2><p>함수는 일급 객체이므로 함수 리터럴로 생성한 함수 객체를 변수에 할당할 수 있다. 함수 표현식은 일반적으로 함수명을 생략한다.</p>
+<p>함수 표현식은 변수선언이 이루어 지고 런타임에 객체가 할당된다.(변수 호이스팅)</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 함수 표현식, 런타임 이전에 변수 선언을 한다.</span></span><br><span class="line"><span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> x + y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h2 id="3-5-함수-호출"><a href="#3-5-함수-호출" class="headerlink" title="3.5. 함수 호출"></a>3.5. 함수 호출</h2><p>함수는 함수를 참조하는 인수(argument)와 함수 호출 연산자인 매개변수(parameter)로 구성되어 있다.</p>
+<br>
+
+<h2 id="3-6-즉시-실행-함수"><a href="#3-6-즉시-실행-함수" class="headerlink" title="3.6. 즉시 실행 함수"></a>3.6. 즉시 실행 함수</h2><p>함수의 정의와 동시에 즉시 호출되고 한 번만 호출되며 다시 호출할 수 없다. 즉시 실행 함수는 함수명이 없는 익명 즉시 실행 함수를 사용하는 것이 일반적이다.</p>
+<p>즉시 실행 함수의 사용 목적은 즉시 실행 함수 내에 코드를 모아 두면 변수명, 함수명의 충돌을 방지하기 떄문이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> a = <span class="hljs-number">3</span>;</span><br><span class="line">  <span class="hljs-keyword">var</span> b = <span class="hljs-number">5</span>;</span><br><span class="line">  <span class="hljs-keyword">return</span> a * b;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="3-7-중첩-함수"><a href="#3-7-중첩-함수" class="headerlink" title="3.7. 중첩 함수"></a>3.7. 중첩 함수</h2><p>함수 내부에 정의된 함수를 중첩함수 또는 내부함수라 한다. 일반적으로 중첩 함수는 외부함수를 돕는 헬퍼 함수역할을 한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inner</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">        <span class="hljs-keyword">var</span> y = <span class="hljs-number">2</span>;</span><br><span class="line">        <span class="hljs-comment">// 중첩함수는 외부함수의 변수를 참조할 수 있다.</span></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(x + y);		<span class="hljs-comment">// 3</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// 외부함수는 중첩함수의 변수를 참조할 수 없다.</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(x + y);	<span class="hljs-comment">// y를 참조할 수 없다.</span></span><br><span class="line">&#125;	<span class="hljs-comment">// 이와 같은 개념을 스코프라 한다.</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="3-8-콜백-함수"><a href="#3-8-콜백-함수" class="headerlink" title="3.8. 콜백 함수"></a>3.8. 콜백 함수</h2><p>자바스크립트의 함수는 일급 객체이므로 함수의 인수로 함수를 전달할 수 있다. 아래 예제는 강사님의 예제이다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 콜백 함수를 전달받는 함수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">print</span>(<span class="hljs-params">f</span>)</span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> string = <span class="hljs-string">'Hello'</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">return</span> f(string);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// print 함수에 콜백 함수를 전달하면서 호출</span></span><br><span class="line"><span class="hljs-keyword">var</span> res1 = print(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>)</span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> str.toUpperCase();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// print 함수에 콜백 함수를 전달하면서 호출</span></span><br><span class="line"><span class="hljs-keyword">var</span> res2 = print(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>)</span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> str.toLowerCase();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(res1, res2); <span class="hljs-comment">// HELLO hello</span></span><br></pre></td></tr></table></figure>
+
+<p>이해가 되지않아 나만의 그림으로 그려봤다.</p>
+<p><img src="https://user-images.githubusercontent.com/45448502/57371314-63510800-71cd-11e9-89b7-ca3879784b6b.png" alt="image"></p>
+<p>절대 이런 방식으로 콜백이 일어나지 않지만, 이런식으로 이해 해봤다.</p>
+<br>
+
+<p>제이쿼리를 쓸 때 콜백인지 뭔지도 모르고 썼던 클릭이벤트 사용이 예제로 나왔다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// myButton 버튼을 클릭하면 콜백함수를 실행해 콘솔로그로 'button clicked!'가 나온다.</span></span><br><span class="line"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'myButton'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'button clicked!'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<h2 id><a href="#" class="headerlink" title></a><br></h2><h1 id="4-스코프"><a href="#4-스코프" class="headerlink" title="4. 스코프"></a>4. 스코프</h1><p><strong>변수는 자신이 선언된 위치에 의해 자신이 유효한 범위, 즉 다른 코드가 변수 자신을 참조할 수 있는 범위를 결정한다</strong>. 이 범위를 <strong>스코프</strong>라 한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-string">'global'</span>;	<span class="hljs-comment">// 전역변수(스코프)</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> x = <span class="hljs-string">'local'</span>;	<span class="hljs-comment">// foo함수 내에서의 지역변수(스코프)</span></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// global</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="4-1-스코프-체인"><a href="#4-1-스코프-체인" class="headerlink" title="4.1. 스코프 체인"></a>4.1. 스코프 체인</h2><p><strong>스코프는 함수의 중첩에 의해 계층적 구조를 갖는다</strong>. </p>
+<p>중첩 함수의 지역 스코프는 중첩 함수를 포함하는 외부 함수의 지역 스코프와 계층적 구조를 갖는다. 이때 외부 함수의 지역 스코프를 중첩함수의 상위 스코프라 한다.</p>
+<p>모든 스코프는 하나의 계층적 구조로 연결되며 모든 지역 스코프의 최상위 스코프를 전역 스코프라 한다. 이렇게 스코프가 계층적으로 연결된 것을 <strong>스코프 체인</strong>이라 부른다.</p>
+<p><strong>변수를 참조할 때, 자바스크립트 엔진은 스코프 체인을 통해 변수를 참조하는 코드의 스코프에서 상위 스코프 방향으로 이동하며 변수를 검색한다.</strong></p>
+<p>밑에 예제를 보면 이해하는데 많은 도움이 되는 것 같다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> y = <span class="hljs-number">20</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> z = <span class="hljs-number">40</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> z = <span class="hljs-number">30</span>;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(x);	<span class="hljs-comment">// 10</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(y);	<span class="hljs-comment">// 20</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(z);	<span class="hljs-comment">// 30</span></span><br><span class="line">  </span><br><span class="line">  	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">        <span class="hljs-keyword">var</span> x = <span class="hljs-number">50</span>;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(x);	<span class="hljs-comment">// 50</span></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(y);	<span class="hljs-comment">// 20</span></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(z);	<span class="hljs-comment">// 30</span></span><br><span class="line">  	&#125;</span><br><span class="line">    bar();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);	<span class="hljs-comment">// 10</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(y);	<span class="hljs-comment">// 20</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(z);	<span class="hljs-comment">// 40</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="4-2-함수-레벨-스코프"><a href="#4-2-함수-레벨-스코프" class="headerlink" title="4.2. 함수 레벨 스코프"></a>4.2. 함수 레벨 스코프</h2><p>함수 레벨 스코프는 <strong>코드 블록이 아닌 함수에 의해서만 지역 스코프가 생성</strong>된다.</p>
+<p><strong>var 키워드로 선언된 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정</strong>한다. 이러한 특성을 <strong>함수 레벨 스코프</strong>라 한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// var 키워드는 블록 레벨 스코프를 인정하지 않는다.</span></span><br><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span>(ture)&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);		<span class="hljs-comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// var 키워드는 함수 레벨 스코프를 인정한다.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> x = <span class="hljs-number">300</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);		<span class="hljs-comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="4-3-렉시컬-스코프"><a href="#4-3-렉시컬-스코프" class="headerlink" title="4.3. 렉시컬 스코프"></a>4.3. 렉시컬 스코프</h2><p>자바스크립트의 렉시컬 스코프는 함수를 어디서 정의했는지에 따라 함수의 상위 스코프를 결정한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;</span><br><span class="line">  bar();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();	<span class="hljs-comment">// 1</span></span><br><span class="line">bar();	<span class="hljs-comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="4-4-암묵적-전역-변수"><a href="#4-4-암묵적-전역-변수" class="headerlink" title="4.4. 암묵적 전역 변수"></a>4.4. 암묵적 전역 변수</h2><p>선언하지 않은 변수에 값을 할당하면 자바스크립트 엔진은 아무런 에러없이 암묵적으로 전역 변수를 선언하고 값을 할당한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">    x = <span class="hljs-number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);		<span class="hljs-comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>, <a class="has-link-grey -link" href="/tags/TIL/">TIL</a>, <a class="has-link-grey -link" href="/tags/객체/">객체</a>, <a class="has-link-grey -link" href="/tags/러버덕/">러버덕</a>, <a class="has-link-grey -link" href="/tags/스코프/">스코프</a>, <a class="has-link-grey -link" href="/tags/원시-값/">원시 값</a>, <a class="has-link-grey -link" href="/tags/함수/">함수</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/09/til-20190509/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">러버덕, 별찍기</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/07/til-20190507/">
+                <span class="level-item">제어문, 반복문, 조건문, 타입변환, 단축평가, 객체 리터럴</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="최성진">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        최성진
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        엄청난 개발자가 될 준비 중
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>서울</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        48
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        56
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/goodsungjin" target="_blank">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/goodsungjin">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="https://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">19</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/TIL/">
+            <span class="level-start">
+                <span class="level-item">TIL</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">37</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/TIL/HTML-CSS/">
+            <span class="level-start">
+                <span class="level-item">HTML & CSS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/TIL/JavaScript/">
+            <span class="level-start">
+                <span class="level-item">JavaScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">23</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/TIL/컴퓨터공학/">
+            <span class="level-start">
+                <span class="level-item">컴퓨터공학</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 14.44px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 16.67px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 13.33px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 15.56px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/05/til-20190605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/03/til-20190603/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/02/til-20190602/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/31/til-20190531/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
+                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/29/til-20190529/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
+                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Ajax/">
+                        <span class="tag">Ajax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithm/">
+                        <span class="tag">Algorithm</span>
+                        <span class="tag is-grey">18</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bubble-Sort/">
+                        <span class="tag">Bubble Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Codewars/">
+                        <span class="tag">Codewars</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Flex/">
+                        <span class="tag">Flex</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Form/">
+                        <span class="tag">Form</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Insertion-Sort/">
+                        <span class="tag">Insertion Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JSON/">
+                        <span class="tag">JSON</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/LeetCode/">
+                        <span class="tag">LeetCode</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-PI/">
+                        <span class="tag">Math.PI</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-ceil/">
+                        <span class="tag">Math.ceil</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-random/">
+                        <span class="tag">Math.random</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Merge-Sort/">
+                        <span class="tag">Merge Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Selection-Sort/">
+                        <span class="tag">Selection Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-indexOf/">
+                        <span class="tag">String.indexOf</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-replace/">
+                        <span class="tag">String.replace</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-substring/">
+                        <span class="tag">String.substring</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TIL/">
+                        <span class="tag">TIL</span>
+                        <span class="tag is-grey">37</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/linear-gradient/">
+                        <span class="tag">linear-gradient</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/this/">
+                        <span class="tag">this</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/toString/">
+                        <span class="tag">toString</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/white-space/">
+                        <span class="tag">white-space</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/가상요소-선택자/">
+                        <span class="tag">가상요소 선택자</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/개념정리/">
+                        <span class="tag">개념정리</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체/">
+                        <span class="tag">객체</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체-리터럴/">
+                        <span class="tag">객체 리터럴</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/고차함수/">
+                        <span class="tag">고차함수</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/기초-알고리즘/">
+                        <span class="tag">기초 알고리즘</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/데이터-타입/">
+                        <span class="tag">데이터 타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/러버덕/">
+                        <span class="tag">러버덕</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/반복문/">
+                        <span class="tag">반복문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/변수/">
+                        <span class="tag">변수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/변수의-생명주기/">
+                        <span class="tag">변수의 생명주기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/별찍기/">
+                        <span class="tag">별찍기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/복습/">
+                        <span class="tag">복습</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/생성자-함수/">
+                        <span class="tag">생성자 함수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/스코프/">
+                        <span class="tag">스코프</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/시작/">
+                        <span class="tag">시작</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/애니메이션/">
+                        <span class="tag">애니메이션</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/연습문제/">
+                        <span class="tag">연습문제</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/예습/">
+                        <span class="tag">예습</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/원시-값/">
+                        <span class="tag">원시 값</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-브라우저/">
+                        <span class="tag">웹 브라우저</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-사이트/">
+                        <span class="tag">웹 사이트</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-접근성/">
+                        <span class="tag">웹 접근성</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-표준/">
+                        <span class="tag">웹 표준</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/제어문/">
+                        <span class="tag">제어문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/조건문/">
+                        <span class="tag">조건문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터공학/">
+                        <span class="tag">컴퓨터공학</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/클래스/">
+                        <span class="tag">클래스</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/키워드/">
+                        <span class="tag">키워드</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/프로토타입/">
+                        <span class="tag">프로토타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/함수/">
+                        <span class="tag">함수</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/05/til-20190605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/03/til-20190603/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/02/til-20190602/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/31/til-20190531/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
+                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/29/til-20190529/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
+                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">21</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Ajax/">
+                        <span class="tag">Ajax</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithm/">
+                        <span class="tag">Algorithm</span>
+                        <span class="tag is-grey">18</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Bubble-Sort/">
+                        <span class="tag">Bubble Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Codewars/">
+                        <span class="tag">Codewars</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Flex/">
+                        <span class="tag">Flex</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Form/">
+                        <span class="tag">Form</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Insertion-Sort/">
+                        <span class="tag">Insertion Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JSON/">
+                        <span class="tag">JSON</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/LeetCode/">
+                        <span class="tag">LeetCode</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-PI/">
+                        <span class="tag">Math.PI</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-ceil/">
+                        <span class="tag">Math.ceil</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Math-random/">
+                        <span class="tag">Math.random</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Merge-Sort/">
+                        <span class="tag">Merge Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Selection-Sort/">
+                        <span class="tag">Selection Sort</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-indexOf/">
+                        <span class="tag">String.indexOf</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-replace/">
+                        <span class="tag">String.replace</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/String-substring/">
+                        <span class="tag">String.substring</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TIL/">
+                        <span class="tag">TIL</span>
+                        <span class="tag is-grey">37</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/linear-gradient/">
+                        <span class="tag">linear-gradient</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/this/">
+                        <span class="tag">this</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/toString/">
+                        <span class="tag">toString</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/white-space/">
+                        <span class="tag">white-space</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/가상요소-선택자/">
+                        <span class="tag">가상요소 선택자</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/개념정리/">
+                        <span class="tag">개념정리</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체/">
+                        <span class="tag">객체</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/객체-리터럴/">
+                        <span class="tag">객체 리터럴</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/고차함수/">
+                        <span class="tag">고차함수</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/기초-알고리즘/">
+                        <span class="tag">기초 알고리즘</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/데이터-타입/">
+                        <span class="tag">데이터 타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/러버덕/">
+                        <span class="tag">러버덕</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/반복문/">
+                        <span class="tag">반복문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/변수/">
+                        <span class="tag">변수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/변수의-생명주기/">
+                        <span class="tag">변수의 생명주기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/별찍기/">
+                        <span class="tag">별찍기</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/복습/">
+                        <span class="tag">복습</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/생성자-함수/">
+                        <span class="tag">생성자 함수</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/스코프/">
+                        <span class="tag">스코프</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/시작/">
+                        <span class="tag">시작</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/애니메이션/">
+                        <span class="tag">애니메이션</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/연습문제/">
+                        <span class="tag">연습문제</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/예습/">
+                        <span class="tag">예습</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/원시-값/">
+                        <span class="tag">원시 값</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-브라우저/">
+                        <span class="tag">웹 브라우저</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-사이트/">
+                        <span class="tag">웹 사이트</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-접근성/">
+                        <span class="tag">웹 접근성</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/웹-표준/">
+                        <span class="tag">웹 표준</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/제어문/">
+                        <span class="tag">제어문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/조건문/">
+                        <span class="tag">조건문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터공학/">
+                        <span class="tag">컴퓨터공학</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/클래스/">
+                        <span class="tag">클래스</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/키워드/">
+                        <span class="tag">키워드</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/프로토타입/">
+                        <span class="tag">프로토타입</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/함수/">
+                        <span class="tag">함수</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="러버덕, 원시 값, 객체, 함수, 스코프" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 최성진&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
