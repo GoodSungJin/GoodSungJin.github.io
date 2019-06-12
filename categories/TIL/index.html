@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="GoodSungJin" height="28">
+                <img src="/images/og_image.png" alt="GoodSungJin" height="28">
             
             </a>
         </div>
@@ -145,6 +145,135 @@
         </nav>
     </div>
 </div>
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/12/til-20190612/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190612">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-11T15:09:39.000Z">2019-06-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/HTML-CSS/">HTML & CSS</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/HTML-CSS/컴퓨터-공학/">컴퓨터 공학</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (나에 대하여 1 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/12/til-20190612/">til-20190612</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="1-TypeScript"><a href="#1-TypeScript" class="headerlink" title="1. TypeScript"></a>1. TypeScript</h1>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/11/til-20190611/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="SPA, Routing">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-10T15:00:00.000Z">2019-06-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/HTML-CSS/">HTML & CSS</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 563 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/11/til-20190611/">SPA, Routing</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="1-SPA-Single-Page-Application"><a href="#1-SPA-Single-Page-Application" class="headerlink" title="1. SPA(Single Page Application)"></a>1. SPA(Single Page Application)</h1><p>SPA는 모던 웹의 패러다임이다. 기본적으로 단일 페이지로 구성되어 한 번의 다운로드로 모든 파일을 다 가져와서 첫 로딩속도가 느리고, SEO문제가 좀 있는게 단점이지만 로딩된 후는 깔끔한 화면전환과 깜빡거리지 않는다는 장점이 있다.</p>
+<br>
+
+<hr>
+<h1 id="2-Routing"><a href="#2-Routing" class="headerlink" title="2. Routing"></a>2. Routing</h1><p>애플리케이션에서 라우팅이란 사용자가 태스크를 수행하기 위해 어떤 화면에서 다른 화면으로 화면을 전환하는 내비게이션을 관리하기 위한 기능을 의미한다. </p>
+<p>브라우저가 화면을 전환하는 경우는 아래와 같다.</p>
+<ol>
+<li>브라우저의 주소창에 URL을 입력하면 해당 페이지로 이동한다.</li>
+<li>웹페이지의 링크를 클릭하면 해당 페이지로 이동한다.</li>
+<li>블라우저의 뒤로가기 또는 앞으로가기 버튼을 클릭하면 사용자가 방문한 웹페이지의 기록의 뒤 또는 앞으로 이동한다.</li>
+</ol>
+<p>AJAX 요청에 의해 서버로부터 데이터를 응답받아 화면을 생성하는 경우, 브라우저의 주소창의 URL은 변경되지 않는다. 이는 사용자의 방문 history를 관리할 수 없음을 의미하며, SEO(검색엔진 최적화) 이슈의 발생 원인이기도 하다. <strong>history 관리를 위해서는 각 페이지는 브라우저의 주소창에서 구별할 수 있는 유일한 URL을 소유하여야 한다.</strong></p>
+<br>
+
+<hr>
+<h1 id="3-SPA와-Routing"><a href="#3-SPA와-Routing" class="headerlink" title="3. SPA와 Routing"></a>3. SPA와 Routing</h1><h2 id="3-1-전통적-링크-방식"><a href="#3-1-전통적-링크-방식" class="headerlink" title="3.1. 전통적 링크 방식"></a>3.1. 전통적 링크 방식</h2><h2 id="3-2-AJAX방식"><a href="#3-2-AJAX방식" class="headerlink" title="3.2. AJAX방식"></a>3.2. AJAX방식</h2><h3 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h3><ul>
+<li>화면이 깜빡이지 않는다.</li>
+</ul>
+<h3 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h3><ul>
+<li>SEO의 오류가 있다.</li>
+<li>URL이 바뀌지 않아 히스토리가 남지 않는다.</li>
+<li>Reload시 첫페이지가 등장한다.</li>
+</ul>
+<h2 id="3-3-Hash방식"><a href="#3-3-Hash방식" class="headerlink" title="3.3. Hash방식"></a>3.3. Hash방식</h2><p>AJAX방식의 단점을 다 보완했지만 URL에 해시태그가 들어가 가독성이 좋지 않다.</p>
+<h2 id="3-4-pushState-방식-pjax"><a href="#3-4-pushState-방식-pjax" class="headerlink" title="3.4. pushState 방식(pjax)"></a>3.4. pushState 방식(pjax)</h2><p>모든 문제가 해결되지만 백엔드와의 협업이 필요하고, 최신브라우저만 지원한다.</p>
+<blockquote>
+<h3 id="이벤트"><a href="#이벤트" class="headerlink" title="이벤트"></a>이벤트</h3><p>‘DomContentLoaded’ 는 Dom이 로드되면 실행</p>
+<p>‘load’ 모든게 로드되면 실행</p>
+</blockquote>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
 
     <div class="card">
     
@@ -629,179 +758,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/05/20/til-20190520/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="배열 고차 함수">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-19T15:00:00.000Z">2019-05-20</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5분 읽기 (나에 대하여 811 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/05/20/til-20190520/">배열 고차 함수</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="1-배열-고차-함수"><a href="#1-배열-고차-함수" class="headerlink" title="1. 배열 고차 함수"></a>1. 배열 고차 함수</h1><p>함수를 인수로 받거나, 함수를 리턴하면 고차함수라 한다. 고차함수는 외부 상태 변겅이나 가변 데이터를 피하고 <strong>불변성을 지향</strong>한다.함수형 프로그래밍은 클로저가 중요하다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeCounter</span>(<span class="hljs-params">predicate</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> num = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;		<span class="hljs-comment">// 상위 스코프는 makeCounter이다.</span></span><br><span class="line">    num = predicate(num);</span><br><span class="line">    <span class="hljs-keyword">return</span> num;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>상위스코프의 결정은 정의와 동시에 이루어 진다. 이를 렉시컬스코프라 한다.</p>
-<br>
-
-<h2 id="1-1-Array-prototype-sort"><a href="#1-1-Array-prototype-sort" class="headerlink" title="1.1. Array.prototype.sort"></a>1.1. Array.prototype.sort</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> points = [<span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">25</span>, <span class="hljs-number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 오름차순 정렬</span></span><br><span class="line">fruits.sort();</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 내림차순 정렬</span></span><br><span class="line">fruits.sort().reverse();</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 숫자 배열 오름차순 정렬</span></span><br><span class="line">points.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>&#123; <span class="hljs-keyword">return</span> a - b; &#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 숫자 배열 내림차순 정렬</span></span><br><span class="line">points.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>&#123; <span class="hljs-keyword">return</span> b - a; &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 객체 정렬</span></span><br><span class="line"><span class="hljs-keyword">const</span> todos = [</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">'JavaScript'</span> &#125;,</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">'HTML'</span> &#125;,</span><br><span class="line">  &#123; <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">'CSS'</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 비교 함수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">key</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// 프로퍼티 값이 문자열인 경우, - 산술 연산으로 비교하면 NaN이 나오므로 비교 연산을 사용한다.</span></span><br><span class="line">    <span class="hljs-keyword">return</span> a[key] &gt; b[key] ? <span class="hljs-number">1</span> : (a[key] &lt; b[key] ? <span class="hljs-number">-1</span> : <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// id를 기준으로 정렬</span></span><br><span class="line">todos.sort(compare(<span class="hljs-string">'id'</span>));</span><br><span class="line"><span class="hljs-built_in">console</span>.log(todos);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// content를 기준으로 정렬</span></span><br><span class="line">todos.sort(compare(<span class="hljs-string">'content'</span>));</span><br><span class="line"><span class="hljs-built_in">console</span>.log(todos);</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-2-Array-prototype-forEach"><a href="#1-2-Array-prototype-forEach" class="headerlink" title="1.2. Array.prototype.forEach"></a>1.2. Array.prototype.forEach</h2><ul>
-<li>forEach의 리턴값은 undefined이다.</li>
-<li>for 문 대신 사용할 수 있고 for 문의 사용을 자제하고 forEach를 사용하는 게 좋다.</li>
-</ul>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];</span><br><span class="line"><span class="hljs-keyword">let</span> pows = [];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// for 사용</span></span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">  pows.push(numbers[i] ** <span class="hljs-number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// forEach 사용</span></span><br><span class="line">numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>&#123;	<span class="hljs-comment">// 콜백함수의 파라미터로 요소값, 요소값의 인덱스, this</span></span><br><span class="line">  pows.push(item ** <span class="hljs-number">2</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>forEach 메소드의 두번째 인자로 this를 전달할 수 있다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Square</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.array = [];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Square.prototype.multiply = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">arr</span>) </span>&#123;</span><br><span class="line">  arr.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// this를 인수로 전달하지 않으면 this === window</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.array.push(item * item);</span><br><span class="line">  &#125;, <span class="hljs-keyword">this</span>);	<span class="hljs-comment">// 여기</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> square = <span class="hljs-keyword">new</span> Square();</span><br><span class="line">square.multiply([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(square.array); <span class="hljs-comment">// [ 1, 4, 9 ]</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-3-Array-prototype-map"><a href="#1-3-Array-prototype-map" class="headerlink" title="1.3. Array.prototype.map"></a>1.3. Array.prototype.map</h2><p>콜백 함수의 반환값으로 새로운 배열을 생성하여 반환한다. 이때 원본 배열은 변경되지 않는다. 들어갈 때 3개면 나올 때도 3개다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> roots = numbers.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>&#123;	<span class="hljs-comment">// 새로운 배열을 리턴하기 위해 변수를 선언해준다.</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.sqrt(item);	<span class="hljs-comment">// return이 무조건 있어야한다. push와 동일한 역할을 한다.</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 위 코드의 축약표현은 아래와 같다.</span></span><br><span class="line"><span class="hljs-comment">// const roots = numbers.map(Math.sqrt);</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// map 메소드는 새로운 배열을 반환한다</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(roots);   <span class="hljs-comment">// [ 1, 2, 3 ]</span></span><br><span class="line"><span class="hljs-comment">// map 메소드는 원본 배열은 변경하지 않는다</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(numbers); <span class="hljs-comment">// [ 1, 4, 9 ]</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-4-Array-prototype-filter"><a href="#1-4-Array-prototype-filter" class="headerlink" title="1.4. Array.prototype.filter"></a>1.4. Array.prototype.filter</h2><p>콜백함수의 실행 결과가 true인 배열 요소의 값만을 추출한 새로운 배열을 반환한다.</p>
-<p>들어갈 때 3개면 나올 때는 3개 이하이다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> result = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item, index, self</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`[<span class="hljs-subst">$&#123;index&#125;</span>] = <span class="hljs-subst">$&#123;item&#125;</span>`</span>);</span><br><span class="line">  <span class="hljs-keyword">return</span> item % <span class="hljs-number">2</span>; <span class="hljs-comment">// 홀수만을 필터링한다 (1은 true로 평가된다) if와 같은 역할을 한다.</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// [ 1, 3, 5 ]</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-5-Array-prototype-reduce"><a href="#1-5-Array-prototype-reduce" class="headerlink" title="1.5. Array.prototype.reduce"></a>1.5. Array.prototype.reduce</h2><p>하나의 값을 반환한다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">previousValue: 이전 콜백의 반환값</span></span><br><span class="line"><span class="hljs-comment">currentValue : 배열 요소의 값</span></span><br><span class="line"><span class="hljs-comment">currentIndex : 인덱스</span></span><br><span class="line"><span class="hljs-comment">array        : 메소드를 호출한 배열, 즉 this</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-keyword">const</span> sum = arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">previousValue, currentValue, currentIndex, self</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(previousValue + <span class="hljs-string">'+'</span> + currentValue + <span class="hljs-string">'='</span> + (previousValue + currentValue));</span><br><span class="line">  <span class="hljs-keyword">return</span> previousValue + currentValue; <span class="hljs-comment">// 결과는 다음 콜백의 첫번째 인자로 전달된다</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum); <span class="hljs-comment">// 15: 1~5까지의 합</span></span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">1: 1+2=3</span></span><br><span class="line"><span class="hljs-comment">2: 3+3=6</span></span><br><span class="line"><span class="hljs-comment">3: 6+4=10</span></span><br><span class="line"><span class="hljs-comment">4: 10+5=15</span></span><br><span class="line"><span class="hljs-comment">15</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> max = arr.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">prev, cur</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> prev &gt; cur ? prev : cur;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(max); <span class="hljs-comment">// 5: 최대값</span></span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/05/17/til-20190517/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="러버덕, 연습문제">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-16T15:00:00.000Z">2019-05-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9분 읽기 (나에 대하여 1276 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/05/17/til-20190517/">러버덕, 연습문제</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="아침-러버덕"><a href="#아침-러버덕" class="headerlink" title="아침 러버덕"></a>아침 러버덕</h1><ol>
-<li><p>this는 다음 상황에서 어떻게 바인딩 되는지 토의해 보세요.</p>
-<ul>
-<li>함수의 호출 방식에 따라 this에 바인딩 되는 객체가 달라진다.</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>일반함수를 제외한 객체의 프로퍼티나 메소드를 참조하기 위한 자기참조 변수이다.</p>
-<h3 id="바인딩"><a href="#바인딩" class="headerlink" title="바인딩"></a>바인딩</h3><p>식별자와 값을 연결하는 과정을 바인딩이라 하고, 변수는 할당에 의해 값이 바인딩 된다.</p>
-</blockquote>
-<ul>
-<li><p>일반함수 호출<br>this는 전역객체(window)를 가리킨다.</p>
-</li>
-<li><p>내부함수 호출</p>
-<p>this는 전역객체(window)를 가리킨다.</p>
-</li>
-<li><p>method 호출</p>
-<p>메소드를 호출한 객를 가리킨다.</p>
-</li>
-<li><p>생성자 함수 호출</p>
-<p>생성자 함수가 생설할 미래의 인스턴스를 가르킨다.</p>
-</li>
-<li><p>콜백함수 호출</p>
-<p>this는 전역객체(window)를 가리킨다.</p>
-</li>
-<li><p>Function.prototype.apply/call/bind에 의한 간접 호출</p>
-</li>
-</ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/05/17/til-20190517/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -868,7 +824,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        55
+                        57
                     </p>
                 </div>
             </div>
@@ -878,7 +834,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        7
                     </p>
                 </div>
             </div>
@@ -888,7 +844,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        56
+                        59
                     </p>
                 </div>
             </div>
@@ -991,7 +947,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">19</span>
+                <span class="level-item tag">20</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/">
@@ -999,7 +955,7 @@
                 <span class="level-item">TIL</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">46</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/TIL/HTML-CSS/">
@@ -1007,7 +963,7 @@
                 <span class="level-item">HTML & CSS</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/JavaScript/">
@@ -1015,7 +971,7 @@
                 <span class="level-item">JavaScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">24</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/컴퓨터공학/">
@@ -1037,7 +993,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.5px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.75px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.25px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.75px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 11.25px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.5px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 13.75px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.25px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.25px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.25px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터-공학/" style="font-size: 10px;">컴퓨터 공학</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.5px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -1051,6 +1007,44 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/12/til-20190612/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190612">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:09:39.000Z">2019-06-12</time></div>
+                    <a href="/2019/06/12/til-20190612/" class="has-link-black-ter is-size-6">til-20190612</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/11/til-20190611/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="SPA, Routing">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T15:00:00.000Z">2019-06-11</time></div>
+                    <a href="/2019/06/11/til-20190611/" class="has-link-black-ter is-size-6">SPA, Routing</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/HTML-CSS/">HTML & CSS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1109,44 +1103,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/05/31/til-20190531/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
-                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/05/29/til-20190529/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
-                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1165,7 +1121,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1226,7 +1182,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -1240,7 +1196,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1268,7 +1224,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">12</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1290,6 +1246,13 @@
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
                         <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaSript/">
+                        <span class="tag">JavaSript</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1329,6 +1292,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/SPA/">
+                        <span class="tag">SPA</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Selection-Sort/">
                         <span class="tag">Selection Sort</span>
                         <span class="tag is-grey">1</span>
@@ -1359,7 +1329,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">46</span>
                     </a>
                 </div>
                 
@@ -1569,6 +1539,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/조건문/">
                         <span class="tag">조건문</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터-공학/">
+                        <span class="tag">컴퓨터 공학</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1633,6 +1610,44 @@
         
         <article class="media">
             
+            <a href="/2019/06/12/til-20190612/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190612">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:09:39.000Z">2019-06-12</time></div>
+                    <a href="/2019/06/12/til-20190612/" class="has-link-black-ter is-size-6">til-20190612</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/11/til-20190611/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="SPA, Routing">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T15:00:00.000Z">2019-06-11</time></div>
+                    <a href="/2019/06/11/til-20190611/" class="has-link-black-ter is-size-6">SPA, Routing</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/HTML-CSS/">HTML & CSS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
@@ -1688,44 +1703,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/05/31/til-20190531/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="프로미스">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T15:00:00.000Z">2019-05-31</time></div>
-                    <a href="/2019/05/31/til-20190531/" class="has-link-black-ter is-size-6">프로미스</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/05/29/til-20190529/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Ajax">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-28T15:00:00.000Z">2019-05-29</time></div>
-                    <a href="/2019/05/29/til-20190529/" class="has-link-black-ter is-size-6">Ajax</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1744,7 +1721,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1805,7 +1782,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -1819,7 +1796,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1847,7 +1824,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">12</span>
+                        <span class="tag is-grey">13</span>
                     </a>
                 </div>
                 
@@ -1869,6 +1846,13 @@
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
                         <span class="tag is-grey">23</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaSript/">
+                        <span class="tag">JavaSript</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1908,6 +1892,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/SPA/">
+                        <span class="tag">SPA</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Selection-Sort/">
                         <span class="tag">Selection Sort</span>
                         <span class="tag is-grey">1</span>
@@ -1938,7 +1929,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">46</span>
                     </a>
                 </div>
                 
@@ -2153,6 +2144,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터-공학/">
+                        <span class="tag">컴퓨터 공학</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/컴퓨터공학/">
                         <span class="tag">컴퓨터공학</span>
                         <span class="tag is-grey">3</span>
@@ -2204,7 +2202,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="GoodSungJin" height="28">
+                    <img src="/images/og_image.png" alt="GoodSungJin" height="28">
                 
                 </a>
                 <p class="is-size-7">
