@@ -2,24 +2,24 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>모듈화와 npm - GoodSungJin</title>
+<title>모듈 - GoodSungJin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="정리중">
-<meta name="keywords" content="TIL,JavaScript">
+    <meta name="description" content="모듈모듈이란 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각을 말한다. 모듈은 캡슐화하고 공개가 필요한 API만을 외부에 노출한다. 모듈은 애플리케이션에 분리되어 개별적으로 존재하다가 애플리케이션의 로드에 의해 비로소 애플리케이션의 일원이 된다.">
+<meta name="keywords" content="TIL,JavaScript,모듈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="모듈화와 npm">
+<meta property="og:title" content="모듈">
 <meta property="og:url" content="https://GoodSungJin.github.io/2019/06/03/til-20190603/index.html">
 <meta property="og:site_name" content="GoodSungJin">
-<meta property="og:description" content="정리중">
+<meta property="og:description" content="모듈모듈이란 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각을 말한다. 모듈은 캡슐화하고 공개가 필요한 API만을 외부에 노출한다. 모듈은 애플리케이션에 분리되어 개별적으로 존재하다가 애플리케이션의 로드에 의해 비로소 애플리케이션의 일원이 된다.">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
-<meta property="og:updated_time" content="2019-06-09T05:34:34.741Z">
+<meta property="og:updated_time" content="2019-06-13T15:13:23.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="모듈화와 npm">
-<meta name="twitter:description" content="정리중">
+<meta name="twitter:title" content="모듈">
+<meta name="twitter:description" content="모듈모듈이란 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각을 말한다. 모듈은 캡슐화하고 공개가 필요한 API만을 외부에 노출한다. 모듈은 애플리케이션에 분리되어 개별적으로 존재하다가 애플리케이션의 로드에 의해 비로소 애플리케이션의 일원이 된다.">
 <meta name="twitter:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
 
 
@@ -94,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/og_image.png" alt="모듈화와 npm" height="28">
+                <img src="/images/og_image.png" alt="모듈" height="28">
             
             </a>
         </div>
@@ -143,7 +143,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
         </span>
     </div>
     
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    몇 초 읽기 (나에 대하여 80 단어)
+                    6분 읽기 (나에 대하여 830 단어)
                 </span>
                 
                 
@@ -170,15 +170,55 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                모듈화와 npm
+                모듈
             
         </h1>
         <div class="content">
-            <h1 id="정리중"><a href="#정리중" class="headerlink" title="정리중"></a>정리중</h1><a id="more"></a>
+            <h1 id="모듈"><a href="#모듈" class="headerlink" title="모듈"></a>모듈</h1><p>모듈이란 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각을 말한다. 모듈은 캡슐화하고 공개가 필요한 API만을 외부에 노출한다. 모듈은 애플리케이션에 분리되어 개별적으로 존재하다가 애플리케이션의 로드에 의해 비로소 애플리케이션의 일원이 된다.</p>
+<a id="more"></a>
 
-<h1 id="1-모듈화와-npm"><a href="#1-모듈화와-npm" class="headerlink" title="1. 모듈화와 npm"></a>1. 모듈화와 npm</h1><p>모듈이란 애플리케이션을 구성하는 개별적 요소를 말한다.</p>
-<p>모듈화를 하는 것은 각각의 파일스코프로 만드는 것이다.</p>
-<p>모듈을 번들링하다라고 한다.(모듈번들러를 웹팩이라 한다.)</p>
+<p>모듈은 기능별로 분리되어 작성되므로 코드의 단위를 명확히 분리하여 애플리케이션을 구성할 수 있으며 재사용성이 좋아서 개발 효율성과 유지보수성을 높일 수 있다. 하지만 이러한 모듈 기능을 자바스크립트는 제공하지 않는다.</p>
+<p>이러한 자바스크립트의 문제를 해결하기 위해 제안된 것이 <strong>CommonJS</strong>와 <strong>AMD(Asynchronous Module Definition)</strong>이다. 자바스크립트의 모듈화는 크게 CommonJS 진영과 AMD 진영으로 나뉘게 되었고 브라우저에서 모듈을 사용하기 위해서는 모듈 로더 라이브러리를 사용해야 하는 상황이 되었다.</p>
+<p>이러한 상황에서 ES6에서는 모듈기능을 추가하였다.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">src</span>"<span class="hljs-attr">app.js</span>"&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">src</span>"<span class="hljs-attr">subapp.js</span>"&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>아쉽게도 이러한 기능들은 몇가지 이유로 상용화되지 못하고 실상은 <strong>Webpack</strong> 등의 모듈 번들러를 사용하는 것이 일반적이다.</p>
+<br>
+
+<hr>
+<h1 id="1-파일-스코프"><a href="#1-파일-스코프" class="headerlink" title="1. 파일 스코프"></a>1. 파일 스코프</h1><p>모듈화를 한다는 것은 결국 각각의 <strong>파일 스코프</strong>를 만든다는 말과 같다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// foo.js</span></span><br><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-string">'foo'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// bar.js</span></span><br><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-string">'bar'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"foo.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bar.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>위와 같이 자바스크립트 파일을 독립된 두개의 파일로 나누어 로드하여도 결국 하나의 전역을 공유한다. 그렇게 되면 foo.js에서 선언된 x는 bar.js에서 선언된 x가 엎어 써진다.</p>
+<br>
+
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"foo.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bar.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>하지만 위와 같이 module 타입을 명시해주면 각각의 독립된 스코프를 갖게 된다.</p>
+<br>
+
+<hr>
+<h1 id="2-export-키워드"><a href="#2-export-키워드" class="headerlink" title="2. export 키워드"></a>2. export 키워드</h1><p>모듈은 독립적인 파일 스코프를 갖기 때문에 모듈 내에서 선언한 모든 것들은 기본적으로 해당 모듈 내부에서만 참조가 가능하다. 만약 다른 모듈들이 사용할 수 있게 하고 싶다면 export를 이용하면 가능하다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// lib.js</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 변수의 공개</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> x = <span class="hljs-number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 함수의 공개</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">x</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> x + <span class="hljs-number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 클래스의 공개</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>선언문 앞에 매번 export 키워드를 붙이기 싫다면 대상을 모아 하나의 객체로 구성하면 한번에 export 할 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// lib.js</span></span><br><span class="line"><span class="hljs-keyword">const</span> x = <span class="hljs-number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">x</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> x + <span class="hljs-number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> &#123; x, sum, Person&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<h1 id="3-import-키워드"><a href="#3-import-키워드" class="headerlink" title="3. import 키워드"></a>3. import 키워드</h1><p>export한 모듈을 로드하려면 export한 이름으로 import해야 한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// app.js</span></span><br><span class="line"><span class="hljs-comment">// 같은 폴더 내의 lib.js 모듈을 로드하낟.</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; x, sum, Person&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'./lib.js'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(x);	<span class="hljs-comment">// 100</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(sum(<span class="hljs-number">10</span>));	<span class="hljs-comment">// 110</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">'Choi'</span>));	<span class="hljs-comment">// Person &#123; name: 'Choi'&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>각각의 이름을 지정하지 않고 하나의 이름으로 import할 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// app.js</span></span><br><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> lib <span class="hljs-keyword">from</span> <span class="hljs-string">'./lib.js'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(lib.x);	<span class="hljs-comment">// 100</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(lib.sum(<span class="hljs-number">10</span>));	<span class="hljs-comment">// 110</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> lib.Person(<span class="hljs-string">'Choi'</span>));	<span class="hljs-comment">// Person &#123; name: 'Choi'&#125;</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -186,7 +226,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>, <a class="has-link-grey -link" href="/tags/TIL/">TIL</a>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>, <a class="has-link-grey -link" href="/tags/TIL/">TIL</a>, <a class="has-link-grey -link" href="/tags/모듈/">모듈</a>
                 </div>
             </div>
         </div>
@@ -206,14 +246,14 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/05/til-20190605/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">실행컨텍스트</span>
+                <span class="level-item">정리중 실행컨텍스트</span>
             </a>
         </div>
         
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/02/til-20190602/">
-                <span class="level-item">중간 개념정리</span>
+                <span class="level-item">정리중</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -285,7 +325,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        59
+                        60
                     </p>
                 </div>
             </div>
@@ -434,7 +474,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 11.11px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 11.11px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -491,14 +531,14 @@
             
             <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
-                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">정리중 실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -510,14 +550,14 @@
             
             <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -529,14 +569,14 @@
             
             <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
-                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">정리중</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -862,6 +902,13 @@
                     <a class="tags has-addons" href="/tags/러버덕/">
                         <span class="tag">러버덕</span>
                         <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/모듈/">
+                        <span class="tag">모듈</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1091,14 +1138,14 @@
             
             <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
-                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">정리중 실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1110,14 +1157,14 @@
             
             <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1129,14 +1176,14 @@
             
             <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
-                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">정리중</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1466,6 +1513,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/모듈/">
+                        <span class="tag">모듈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/반복문/">
                         <span class="tag">반복문</span>
                         <span class="tag is-grey">1</span>
@@ -1643,7 +1697,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/og_image.png" alt="모듈화와 npm" height="28">
+                    <img src="/images/og_image.png" alt="모듈" height="28">
                 
                 </a>
                 <p class="is-size-7">
@@ -1755,7 +1809,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

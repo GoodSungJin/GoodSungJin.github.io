@@ -2,7 +2,7 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>실행컨텍스트 - GoodSungJin</title>
+<title>정리중 실행컨텍스트 - GoodSungJin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,15 +10,15 @@
     <meta name="description" content="정리중">
 <meta name="keywords" content="TIL,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="실행컨텍스트">
+<meta property="og:title" content="정리중 실행컨텍스트">
 <meta property="og:url" content="https://GoodSungJin.github.io/2019/06/05/til-20190605/index.html">
 <meta property="og:site_name" content="GoodSungJin">
 <meta property="og:description" content="정리중">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
-<meta property="og:updated_time" content="2019-06-11T02:21:47.317Z">
+<meta property="og:updated_time" content="2019-06-13T15:17:54.718Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="실행컨텍스트">
+<meta name="twitter:title" content="정리중 실행컨텍스트">
 <meta name="twitter:description" content="정리중">
 <meta name="twitter:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
 
@@ -94,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/og_image.png" alt="실행컨텍스트" height="28">
+                <img src="/images/og_image.png" alt="정리중 실행컨텍스트" height="28">
             
             </a>
         </div>
@@ -143,7 +143,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 실행컨텍스트">
         </span>
     </div>
     
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4분 읽기 (나에 대하여 636 단어)
+                    5분 읽기 (나에 대하여 736 단어)
                 </span>
                 
                 
@@ -170,7 +170,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                실행컨텍스트
+                정리중 실행컨텍스트
             
         </h1>
         <div class="content">
@@ -185,12 +185,19 @@
 <h3 id="함수코드"><a href="#함수코드" class="headerlink" title="- 함수코드"></a>- 함수코드</h3><p>지역 스코프를 생성해야 하며 전역 스코프에서 시작하는 스코프 체인의 일원으로 연결되어야한다. (함수 실행 컨텍스트)</p>
 <h3 id="eval코드"><a href="#eval코드" class="headerlink" title="- eval코드"></a>- eval코드</h3><p>자신만의 독자적인 스코프를 생선한다. (eval 실행 컨텍스트)</p>
 <h3 id="모듈-코드"><a href="#모듈-코드" class="headerlink" title="- 모듈 코드"></a>- 모듈 코드</h3><p>모듈 별로 독립적이 스코프를 생성한다. (모듈 실행 컨텍스트)</p>
-<br>
-
+<p><img src="https://user-images.githubusercontent.com/45448502/59430784-1d1b4400-8e1e-11e9-8a1c-80bee5125fe5.png" alt="코드평가"></p>
 <h2 id="1-2-실행-가능한-코드의-평가와-실행"><a href="#1-2-실행-가능한-코드의-평가와-실행" class="headerlink" title="1. 2. 실행 가능한 코드의 평가와 실행"></a>1. 2. 실행 가능한 코드의 평가와 실행</h2><p>모든 실행 가능한 코드는 실행(런타임)에 앞서 평가(런타임 이전) 과정을 거쳐 코드 실행을 위한 준비를 한다. 코드의 평가 과정에서 실행 컨텍스트가 생성되고 변수, 함수, 클래스 등의 선언문이 평가되어 그 결과가 생성된 실행 컨텍스트에 등록된다.</p>
 <p>코드의 평가가 끝나면 비로소 선언문을 제외한 코드가 순차적으로 실행된다. 이때 코드 실행에 필요한 정보를 실행 컨텍스트에서 취득한다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> y = <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span> (<span class="hljs-params">a</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> x = <span class="hljs-number">3</span>;</span><br><span class="line">  <span class="hljs-keyword">const</span> y = <span class="hljs-number">4</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span> (<span class="hljs-params">b</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> z = <span class="hljs-number">5</span>;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(a + b + x + y + z);</span><br><span class="line">&#125;</span><br><span class="line">  bar(<span class="hljs-number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(<span class="hljs-number">20</span>); <span class="hljs-comment">// 42</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> y = <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> y = </span><br><span class="line"></span><br><span class="line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span> (<span class="hljs-params">b</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> z = <span class="hljs-number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line">  bar(<span class="hljs-number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(<span class="hljs-number">20</span>); <span class="hljs-comment">// 42</span></span><br></pre></td></tr></table></figure>
 
+<br>
+
+<h3 id="평가"><a href="#평가" class="headerlink" title="평가"></a>평가</h3><p>런타임 이전에 평가를 통해 전역 실행 컨텍스트가 만들어진다.</p>
+<p><img src="https://user-images.githubusercontent.com/45448502/59432898-57d3ab00-8e23-11e9-9160-65512d246fe7.png" alt="전역 실행 컨텍스트 평가"></p>
+<br>
+
+<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><p>런타임에 실행하면 값의 할당이 이루어진다.</p>
+<p><img src="https://user-images.githubusercontent.com/45448502/59433246-0e379000-8e24-11e9-8f36-85cd47d95897.png" alt="전역 실행 컨텍스트 평가"></p>
 <p>렉시컬 스코프가 결정되는 방법</p>
 <p>bar함수는 foo함수의 코드가 평가될 때 만들어진다 </p>
 <p>bar함수의 렉시컬 스코프는 foo인데 실행되고 있는 코드의 실행컨텍스트를 렉시컬스코프로 지정한다.</p>
@@ -230,7 +237,7 @@
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/03/til-20190603/">
-                <span class="level-item">모듈화와 npm</span>
+                <span class="level-item">모듈</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -302,7 +309,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        59
+                        60
                     </p>
                 </div>
             </div>
@@ -451,7 +458,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 11.11px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 11.11px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -508,14 +515,14 @@
             
             <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
-                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">정리중 실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -527,14 +534,14 @@
             
             <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -546,14 +553,14 @@
             
             <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
-                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">정리중</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -879,6 +886,13 @@
                     <a class="tags has-addons" href="/tags/러버덕/">
                         <span class="tag">러버덕</span>
                         <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/모듈/">
+                        <span class="tag">모듈</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -1108,14 +1122,14 @@
             
             <a href="/2019/06/05/til-20190605/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 실행컨텍스트">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time></div>
-                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">실행컨텍스트</a>
+                    <a href="/2019/06/05/til-20190605/" class="has-link-black-ter is-size-6">정리중 실행컨텍스트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1127,14 +1141,14 @@
             
             <a href="/2019/06/03/til-20190603/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈화와 npm">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈화와 npm</a>
+                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1146,14 +1160,14 @@
             
             <a href="/2019/06/02/til-20190602/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="중간 개념정리">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T15:00:00.000Z">2019-06-02</time></div>
-                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">중간 개념정리</a>
+                    <a href="/2019/06/02/til-20190602/" class="has-link-black-ter is-size-6">정리중</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1483,6 +1497,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/모듈/">
+                        <span class="tag">모듈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/반복문/">
                         <span class="tag">반복문</span>
                         <span class="tag is-grey">1</span>
@@ -1660,7 +1681,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/og_image.png" alt="실행컨텍스트" height="28">
+                    <img src="/images/og_image.png" alt="정리중 실행컨텍스트" height="28">
                 
                 </a>
                 <p class="is-size-7">
@@ -1772,7 +1793,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
