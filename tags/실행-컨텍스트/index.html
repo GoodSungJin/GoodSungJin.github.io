@@ -2,14 +2,14 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>태그: 고차함수 - GoodSungJin</title>
+<title>태그: 실행 컨텍스트 - GoodSungJin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="GoodSungJin">
-<meta property="og:url" content="https://GoodSungJin.github.io/tags/고차함수/index.html">
+<meta property="og:url" content="https://GoodSungJin.github.io/tags/실행-컨텍스트/index.html">
 <meta property="og:site_name" content="GoodSungJin">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/images/og_image.png">
@@ -139,7 +139,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">태그</a></li>
-            <li class="is-active"><a href="#" aria-current="page">고차함수</a></li>
+            <li class="is-active"><a href="#" aria-current="page">실행 컨텍스트</a></li>
         </ul>
         </nav>
     </div>
@@ -148,8 +148,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/2019/05/20/til-20190520/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="배열 고차 함수">
+        <a href="/2019/06/05/til-20190605/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="실행컨텍스트">
         </a>
     </div>
     
@@ -157,7 +157,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-19T15:00:00.000Z">2019-05-20</time>
+                <time class="level-item has-text-grey" datetime="2019-06-04T15:00:00.000Z">2019-06-05</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
@@ -167,7 +167,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5분 읽기 (나에 대하여 812 단어)
+                    6분 읽기 (나에 대하여 970 단어)
                 </span>
                 
                 
@@ -176,21 +176,18 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/20/til-20190520/">배열 고차 함수</a>
+                <a class="has-link-black-ter" href="/2019/06/05/til-20190605/">실행컨텍스트</a>
             
         </h1>
         <div class="content">
-            <h1 id="1-배열-고차-함수"><a href="#1-배열-고차-함수" class="headerlink" title="1. 배열 고차 함수"></a>1. 배열 고차 함수</h1><p>함수를 인수로 받거나, 함수를 리턴하면 고차함수라 한다. 고차함수는 외부 상태 변겅이나 가변 데이터를 피하고 <strong>불변성을 지향</strong>한다.함수형 프로그래밍은 클로저가 중요하다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeCounter</span>(<span class="hljs-params">predicate</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> num = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;		<span class="hljs-comment">// 상위 스코프는 makeCounter이다.</span></span><br><span class="line">    num = predicate(num);</span><br><span class="line">    <span class="hljs-keyword">return</span> num;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>상위스코프의 결정은 정의와 동시에 이루어 진다. 이를 렉시컬스코프라 한다.</p>
+            <h1 id="1-실행컨텍스트"><a href="#1-실행컨텍스트" class="headerlink" title="1. 실행컨텍스트"></a>1. 실행컨텍스트</h1><p>실행 컨텍스트는 실행 가능한 코드를 평가하고 실행하기 위해 필요한 환경을 제공하고 코드의 실행 결과를 실제로 관리하는 영역이다. 변수는 메모리에 저장되는게 아니라 실행 컨텍스트의 객체의 키와 벨류로 저장된다.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/05/20/til-20190520/#more">자세히 보기</a>
+                <a class="button is-size-7 is-light" href="/2019/06/05/til-20190605/#more">자세히 보기</a>
                 </div>
             </div>
         </div>
