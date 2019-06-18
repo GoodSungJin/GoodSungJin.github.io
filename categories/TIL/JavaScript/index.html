@@ -151,6 +151,81 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/06/18/til-20190617/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Built-in-directive)">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (나에 대하여 359 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/18/til-20190617/">Angular Component(Built-in-directive)</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="1-Angular-Component-Built-in-directive"><a href="#1-Angular-Component-Built-in-directive" class="headerlink" title="1. Angular Component (Built-in-directive)"></a>1. Angular Component (Built-in-directive)</h1><p>디렉티브는 컴포넌트의 공통된 기술을 분리해내는 기술이며 컴포넌트의 복잡도를 낮추고 가독성을 향상시킨다.</p>
+<p>셀렉터에서 대괄호로 쓰는 이유는 태그로 사용하는 것이 아닌 어트리뷰트로 사용한다는 것을 명시해준다. 아래 예제는 해당 어트리뷰트를 사용하면 모든 글자를 파란색으로 바꾼다.</p>
+<figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// text-blue.directive.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Directive, ElementRef, Renderer2 &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Directive</span>(&#123;</span><br><span class="line">  selector: <span class="hljs-string">'[textBlue]'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextBlueDirective &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">el: ElementRef, renderer: Renderer2</span>) &#123;	<span class="hljs-comment">// el은 호스트요소가 들어온다.</span></span><br><span class="line">    renderer.setStyle(el.nativeElement, <span class="hljs-string">'color'</span>, <span class="hljs-string">'blue'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>어트리뷰트가 사용된 요소를 호스트요소라 한다.</p>
+<br>
+
+<h2 id="1-1-ngclass"><a href="#1-1-ngclass" class="headerlink" title="1.1. ngclass"></a>1.1. ngclass</h2><p>여러개의 클래스를 지정했을 때 기존의 클래스를 덮어쓰지 않는다.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"문자열 | 배열 | 객체"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 문자열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"'text-bold color-blue'"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 배열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"['text-bold', 'color-blue']"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 객체 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"&#123; 'text-bold': true, 'color-blue': false &#125;"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="1-2-ngStyle"><a href="#1-2-ngStyle" class="headerlink" title="1.2. ngStyle"></a>1.2. ngStyle</h2><p>여러 개의 인라인 스타일을 추가 또는 제거한다. 스타일 바인딩 또한 기존의 것을 덮어쓰지 않고 추가 한다.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 문자열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> [<span class="hljs-attr">ngStyle</span>]=<span class="hljs-string">"객체"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 무조건 객체형태 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngStyle</span>]=<span class="hljs-string">"&#123; color: 'red', 'width.px': 100 &#125;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="1-3-ngIf"><a href="#1-3-ngIf" class="headerlink" title="1.3. ngIf"></a>1.3. ngIf</h2><p>우변의 표현식의 연산 결과가 참이면 호스트 요소를 DOM에 추가하고 거짓이면 제거한다. 반드시 우변은 boolean값이여야 한다.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">ngIf</span>]=<span class="hljs-string">"expression"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if else --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; else elseBlock"</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">elseBlock</span>&gt;</span>Falsy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if else --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; then thenBlock else elseBlock"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">thenBlock</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">elseBlock</span>&gt;</span>Falsy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; then thenBlock"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">thenBlock</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="1-4-ngFor"><a href="#1-4-ngFor" class="headerlink" title="1.4. ngFor"></a>1.4. ngFor</h2><p>배열을 순회하면서 DOM에 추가한다.</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of items"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of items; let i=index; let odd=odd; trackBy: trackById"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngFor</span> <span class="hljs-attr">let-item</span> [<span class="hljs-attr">ngForOf</span>]=<span class="hljs-string">"items"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngFor</span> <span class="hljs-attr">let-item</span> [<span class="hljs-attr">ngForOf</span>]=<span class="hljs-string">"items"</span> <span class="hljs-attr">let-i</span>=<span class="hljs-string">"index"</span> <span class="hljs-attr">let-odd</span>=<span class="hljs-string">"odd"</span> [<span class="hljs-attr">ngForTrackBy</span>]=<span class="hljs-string">"trackById"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/06/14/til-20190614/" class="image is-7by1">
             <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
         </a>
@@ -170,7 +245,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5분 읽기 (나에 대하여 715 단어)
+                    5분 읽기 (나에 대하여 716 단어)
                 </span>
                 
                 
@@ -186,44 +261,16 @@
             <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><br>
 
 <p>Angular는 SAP(Single Page Application) 개발을 위한 구글의 오픈소스 자바스크립트 프레임워크이다. 기존의 JavaScript가 HTML/CSS가 컨트롤했다면 Angular는 HTML/CSS가 JavaScript를 컨트롤한다고 볼 수 있다.</p>
-<br>
-
-<h1 id="1-Angular의-장점"><a href="#1-Angular의-장점" class="headerlink" title="1. Angular의 장점"></a>1. Angular의 장점</h1><br>
-
-<h2 id="1-1-컴포넌트-기반-개발"><a href="#1-1-컴포넌트-기반-개발" class="headerlink" title="1.1. 컴포넌트 기반 개발"></a>1.1. 컴포넌트 기반 개발</h2><p>컴포넌트는 기능별로 나누어 놓은 것을 말한다. 이 기능은 프로젝트가 커질 수록 중요하고 개발 생산성을 높인다.</p>
-<br>
-
-<h2 id="1-2-TypeScript의-도입"><a href="#1-2-TypeScript의-도입" class="headerlink" title="1.2. TypeScript의 도입"></a>1.2. TypeScript의 도입</h2><p>Angular는 TypeScript의 도입으로 코드의 가독성을 높이고 예측할 수 있게 하며, 컴파일 단계에서 오류를 포착할 수 있는 장점이 있다. 또한 모듈, 클래스, 인터페이스 등의 강력한 객체 지향 프로그래밍(OOP, Object Oriented Programming) 지원은 크고 복잡한 프로젝트의 코드 기반을 쉽게 구성할 수 있도록 돕는다.</p>
-<br>
-
-<h2 id="1-3-Digest-Loop로-인한-성능저하-문제의-해결"><a href="#1-3-Digest-Loop로-인한-성능저하-문제의-해결" class="headerlink" title="1.3. Digest Loop로 인한 성능저하 문제의 해결"></a>1.3. Digest Loop로 인한 성능저하 문제의 해결</h2><p>AngularJS의 단점 중 대표적인 것이 양방향 데이터 바인딩을 위해 사용되는 Digest Loop로 인한 성능저하였지만 현재는 이 성능 저하가 개선되어 2배이상 빨라졌다.</p>
-<br>
-
-<h2 id="1-4-Lazy-Loading"><a href="#1-4-Lazy-Loading" class="headerlink" title="1.4. Lazy Loading"></a>1.4. Lazy Loading</h2><br>
-
-<h2 id="1-5-코드-최적화"><a href="#1-5-코드-최적화" class="headerlink" title="1.5. 코드 최적화"></a>1.5. 코드 최적화</h2><p>Angular가 버전업 될 때마다 코드 최적화에 힘을 쓰고 있어 현재는 45KB정도의 크기로 축소되었다고 한다.</p>
-<br>
-
-<hr>
-<h1 id="2-Angular-Component"><a href="#2-Angular-Component" class="headerlink" title="2. Angular Component"></a>2. Angular Component</h1><p>컴포넌트는 Angular의 핵심 구성 요소로 애플리케이션의 화면을 구성하는 <strong>뷰(view)</strong>를 생성하고 관리하는 것이다. Angular는 컴포넌트를 조립하여 하나의 완성된 애플리케이션을 작성한다.</p>
-<br>
-
-<h2 id="2-1-웹-컴포넌트"><a href="#2-1-웹-컴포넌트" class="headerlink" title="2.1. 웹 컴포넌트"></a>2.1. 웹 컴포넌트</h2><p>컴포넌트 내에서만독립된 스코프를 갖고 유효한 상태 정보와 로직, 스타일을 소유한 완결된 뷰를 생성하기 위한 것이 컴포넌트이다. <strong>컴포넌트는 독립적이고 완결된 뷰를 생성하기 위하여 “HTML, CSS JavaScript를 하나의 단위로 묶는 것”</strong>이다.</p>
-<figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 임포트 영역</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// @Component 데코레이터 영역</span></span><br><span class="line"><span class="hljs-meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="hljs-string">'app-root'</span>,</span><br><span class="line">  template: <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">    &lt;p&gt;안녕하세요&lt;/p&gt;</span></span><br><span class="line"><span class="hljs-string">  `</span>,</span><br><span class="line">  styles: [<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">	p &#123;</span></span><br><span class="line"><span class="hljs-string">	  color: red;</span></span><br><span class="line"><span class="hljs-string">	&#125;</span></span><br><span class="line"><span class="hljs-string">  `</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">// 컴포넌트 클래스 영역</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppComponent &#123;</span><br><span class="line">  title = <span class="hljs-string">'app'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="2-2-컴포넌트-호출"><a href="#2-2-컴포넌트-호출" class="headerlink" title="2.2. 컴포넌트 호출"></a>2.2. 컴포넌트 호출</h2><p>컴포넌트를 호출하기 전에 루트모듈에 클래스명을 등록해야한다.</p>
-<figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> &#123; BrowserModule &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; NgModule &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; AppComponent &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'./app.component'</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; HelloComponent &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'./hello/hello.component'</span>; <span class="hljs-comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@NgModule</span>(&#123;</span><br><span class="line">  declarations: [</span><br><span class="line">    AppComponent,</span><br><span class="line">    HelloComponent <span class="hljs-comment">// 2</span></span><br><span class="line">  ],</span><br><span class="line">  imports: [BrowserModule],</span><br><span class="line">  providers: [],</span><br><span class="line">  bootstrap: [AppComponent]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule &#123; &#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p>모듈에 등록 후 다른 컴포넌트의 템플릿에서 해당 컴포넌트의 셀렉터를 태그로 호출하는 방식이있다.</p>
-<figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 임포트 영역</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// @Component 데코레이터 영역</span></span><br><span class="line"><span class="hljs-meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="hljs-string">'app-root'</span>,</span><br><span class="line">  template: <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">    &lt;app-home&gt;&lt;/app-home&gt;</span></span><br><span class="line"><span class="hljs-string">  `</span>,</span><br><span class="line">  styles: [<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">	p &#123;</span></span><br><span class="line"><span class="hljs-string">	  color: red;</span></span><br><span class="line"><span class="hljs-string">	&#125;</span></span><br><span class="line"><span class="hljs-string">  `</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">// 컴포넌트 클래스 영역</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppComponent &#123;</span><br><span class="line">  title = <span class="hljs-string">'app'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/14/til-20190614/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -721,64 +768,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/05/22/til-20190522/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-21T15:00:00.000Z">2019-05-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/TIL/">TIL</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 읽기 (나에 대하여 435 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/05/22/til-20190522/">정리중</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="정리중"><a href="#정리중" class="headerlink" title="정리중"></a>정리중</h1>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/05/22/til-20190522/#more">자세히 보기</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -843,7 +832,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        58
+                        59
                     </p>
                 </div>
             </div>
@@ -974,7 +963,7 @@
                 <span class="level-item">TIL</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">47</span>
+                <span class="level-item tag">48</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/TIL/HTML-CSS/">
@@ -990,7 +979,7 @@
                 <span class="level-item">JavaScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">25</span>
+                <span class="level-item tag">26</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/컴퓨터공학/">
@@ -1012,7 +1001,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 12.22px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/실행-컨텍스트/" style="font-size: 10px;">실행 컨텍스트</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 18px;">Algorithm</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 16px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 17px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 19px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 13px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 15px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/실행-컨텍스트/" style="font-size: 10px;">실행 컨텍스트</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -1026,6 +1015,25 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/18/til-20190617/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Built-in-directive)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/til-20190617/" class="has-link-black-ter is-size-6">Angular Component(Built-in-directive)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1103,25 +1111,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/03/til-20190603/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1140,7 +1129,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -1278,7 +1267,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaSript/">
                         <span class="tag">JavaSript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1355,7 +1344,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">47</span>
+                        <span class="tag is-grey">48</span>
                     </a>
                 </div>
                 
@@ -1650,6 +1639,25 @@
         
         <article class="media">
             
+            <a href="/2019/06/18/til-20190617/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Built-in-directive)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/til-20190617/" class="has-link-black-ter is-size-6">Angular Component(Built-in-directive)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/06/14/til-20190614/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
@@ -1724,25 +1732,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/03/til-20190603/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="모듈">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-02T15:00:00.000Z">2019-06-03</time></div>
-                    <a href="/2019/06/03/til-20190603/" class="has-link-black-ter is-size-6">모듈</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1761,7 +1750,7 @@
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -1899,7 +1888,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaSript/">
                         <span class="tag">JavaSript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1976,7 +1965,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">47</span>
+                        <span class="tag is-grey">48</span>
                     </a>
                 </div>
                 
