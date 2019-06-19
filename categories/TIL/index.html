@@ -168,7 +168,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (나에 대하여 359 단어)
+                    2분 읽기 (나에 대하여 360 단어)
                 </span>
                 
                 
@@ -186,29 +186,16 @@
 <figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// text-blue.directive.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Directive, ElementRef, Renderer2 &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Directive</span>(&#123;</span><br><span class="line">  selector: <span class="hljs-string">'[textBlue]'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextBlueDirective &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">el: ElementRef, renderer: Renderer2</span>) &#123;	<span class="hljs-comment">// el은 호스트요소가 들어온다.</span></span><br><span class="line">    renderer.setStyle(el.nativeElement, <span class="hljs-string">'color'</span>, <span class="hljs-string">'blue'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>어트리뷰트가 사용된 요소를 호스트요소라 한다.</p>
-<br>
-
-<h2 id="1-1-ngclass"><a href="#1-1-ngclass" class="headerlink" title="1.1. ngclass"></a>1.1. ngclass</h2><p>여러개의 클래스를 지정했을 때 기존의 클래스를 덮어쓰지 않는다.</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"문자열 | 배열 | 객체"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 문자열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"'text-bold color-blue'"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 배열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"['text-bold', 'color-blue']"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 객체 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"&#123; 'text-bold': true, 'color-blue': false &#125;"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-2-ngStyle"><a href="#1-2-ngStyle" class="headerlink" title="1.2. ngStyle"></a>1.2. ngStyle</h2><p>여러 개의 인라인 스타일을 추가 또는 제거한다. 스타일 바인딩 또한 기존의 것을 덮어쓰지 않고 추가 한다.</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 문자열 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> [<span class="hljs-attr">ngStyle</span>]=<span class="hljs-string">"객체"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- 무조건 객체형태 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngStyle</span>]=<span class="hljs-string">"&#123; color: 'red', 'width.px': 100 &#125;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-3-ngIf"><a href="#1-3-ngIf" class="headerlink" title="1.3. ngIf"></a>1.3. ngIf</h2><p>우변의 표현식의 연산 결과가 참이면 호스트 요소를 DOM에 추가하고 거짓이면 제거한다. 반드시 우변은 boolean값이여야 한다.</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">ngIf</span>]=<span class="hljs-string">"expression"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if else --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; else elseBlock"</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">elseBlock</span>&gt;</span>Falsy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if else --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; then thenBlock else elseBlock"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">thenBlock</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">elseBlock</span>&gt;</span>Falsy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">&lt;!-- if --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"expression; then thenBlock"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">thenBlock</span>&gt;</span>Truthy condition<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="1-4-ngFor"><a href="#1-4-ngFor" class="headerlink" title="1.4. ngFor"></a>1.4. ngFor</h2><p>배열을 순회하면서 DOM에 추가한다.</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- 예 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of items"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of items; let i=index; let odd=odd; trackBy: trackById"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngFor</span> <span class="hljs-attr">let-item</span> [<span class="hljs-attr">ngForOf</span>]=<span class="hljs-string">"items"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">ngFor</span> <span class="hljs-attr">let-item</span> [<span class="hljs-attr">ngForOf</span>]=<span class="hljs-string">"items"</span> <span class="hljs-attr">let-i</span>=<span class="hljs-string">"index"</span> <span class="hljs-attr">let-odd</span>=<span class="hljs-string">"odd"</span> [<span class="hljs-attr">ngForTrackBy</span>]=<span class="hljs-string">"trackById"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/18/til-20190617/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -225,7 +212,7 @@
     
     <div class="card-image">
         <a href="/2019/06/14/til-20190614/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
+            <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
         </a>
     </div>
     
@@ -252,7 +239,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/14/til-20190614/">Angular</a>
+                <a class="has-link-black-ter" href="/2019/06/14/til-20190614/">Angular 장점, Component 기본</a>
             
         </h1>
         <div class="content">
@@ -1039,14 +1026,14 @@
             
             <a href="/2019/06/14/til-20190614/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular</a>
+                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1660,14 +1647,14 @@
             
             <a href="/2019/06/14/til-20190614/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular</a>
+                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>

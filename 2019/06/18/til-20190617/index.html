@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. Angular Component (Built-in-directive)디렉티브는 컴포넌트의 공통된 기술을 분리해내는 기술이며 컴포넌트의 복잡도를 낮추고 가독성을 향상시킨다. 셀렉터에서 대괄호로 쓰는 이유는 태그로 사용하는 것이 아닌 어트리뷰트로 사용한다는 것을 명시해준다. 아래 예제는 해당 어트리뷰트를 사용하면 모든 글자를 파란색으로 바꾼다. 12345">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
-<meta property="og:updated_time" content="2019-06-18T05:07:24.604Z">
+<meta property="og:updated_time" content="2019-06-18T15:51:07.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular Component(Built-in-directive)">
 <meta name="twitter:description" content="1. Angular Component (Built-in-directive)디렉티브는 컴포넌트의 공통된 기술을 분리해내는 기술이며 컴포넌트의 복잡도를 낮추고 가독성을 향상시킨다. 셀렉터에서 대괄호로 쓰는 이유는 태그로 사용하는 것이 아닌 어트리뷰트로 사용한다는 것을 명시해준다. 아래 예제는 해당 어트리뷰트를 사용하면 모든 글자를 파란색으로 바꾼다. 12345">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (나에 대하여 359 단어)
+                    2분 읽기 (나에 대하여 360 단어)
                 </span>
                 
                 
@@ -179,6 +179,8 @@
 <figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// text-blue.directive.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Directive, ElementRef, Renderer2 &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Directive</span>(&#123;</span><br><span class="line">  selector: <span class="hljs-string">'[textBlue]'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextBlueDirective &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">el: ElementRef, renderer: Renderer2</span>) &#123;	<span class="hljs-comment">// el은 호스트요소가 들어온다.</span></span><br><span class="line">    renderer.setStyle(el.nativeElement, <span class="hljs-string">'color'</span>, <span class="hljs-string">'blue'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>어트리뷰트가 사용된 요소를 호스트요소라 한다.</p>
+<a id="more"></a>
+
 <br>
 
 <h2 id="1-1-ngclass"><a href="#1-1-ngclass" class="headerlink" title="1.1. ngclass"></a>1.1. ngclass</h2><p>여러개의 클래스를 지정했을 때 기존의 클래스를 덮어쓰지 않는다.</p>
@@ -226,7 +228,7 @@
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/14/til-20190614/">
-                <span class="level-item">Angular</span>
+                <span class="level-item">Angular 장점, Component 기본</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -485,14 +487,14 @@
             
             <a href="/2019/06/14/til-20190614/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular</a>
+                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
@@ -1106,14 +1108,14 @@
             
             <a href="/2019/06/14/til-20190614/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular</a>
+                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
                     </p>
