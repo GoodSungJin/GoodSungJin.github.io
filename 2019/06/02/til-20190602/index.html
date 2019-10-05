@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 중간 개념정리  1. Data type자바스크립트의 데이터타입은 원시타입과 객체타입으로 나눌 수 있습니다.  원시타입은 immutable value로 변경 불가능한 값이다. 여기서 변경 불가능한 값이란 변수가 가리키는 메모리공간의 값을 바꾸지 못하기 떄문에 재할당을 통해 새로운 메모리공간을 할당하기 전까지 변수에 저장된 값을 변경할 수 없다. 여기서">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://goodsungjin.github.io/gallery/chockchock.jpg">
-<meta property="og:updated_time" content="2019-06-13T15:17:23.133Z">
+<meta property="og:updated_time" content="2019-10-05T05:44:55.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="정리중">
 <meta name="twitter:description" content="1. 중간 개념정리  1. Data type자바스크립트의 데이터타입은 원시타입과 객체타입으로 나눌 수 있습니다.  원시타입은 immutable value로 변경 불가능한 값이다. 여기서 변경 불가능한 값이란 변수가 가리키는 메모리공간의 값을 바꾸지 못하기 떄문에 재할당을 통해 새로운 메모리공간을 할당하기 전까지 변수에 저장된 값을 변경할 수 없다. 여기서">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    20분 읽기 (나에 대하여 2928 단어)
+                    33분 읽기 (나에 대하여 4989 단어)
                 </span>
                 
                 
@@ -272,6 +272,65 @@
 
 <h2 id="동기식-처리-모델-vs-비동기식-처리-모델"><a href="#동기식-처리-모델-vs-비동기식-처리-모델" class="headerlink" title="동기식 처리 모델 vs. 비동기식 처리 모델"></a>동기식 처리 모델 vs. 비동기식 처리 모델</h2><p>## </p>
 <br>
+
+<h1 id="면접대비"><a href="#면접대비" class="headerlink" title="면접대비"></a>면접대비</h1><hr>
+<h2 id="브라우저의-동작원리"><a href="#브라우저의-동작원리" class="headerlink" title="브라우저의 동작원리"></a>브라우저의 동작원리</h2><p>서버에 초기 리퀘스트를 보내면 index.html 파일이 날라와 렌더링 엔진에 의해 HTML문서를 파싱한다. 계속 파싱하다 link태그를 만나면 HTML의 파싱을 중단하고 CSS파서에 의해 CSS를 파싱한다. CSS의 파싱이 끝나면 CSSOM트리를 생성하고, 멈췄던 HTML을 다시 파싱한다. 파싱중 script태그를 만나면 JavaScript엔진에게 주도권을 잠시 양보하고 JavaScript의 파싱을 진행한다. 이 과정에서 토크나이징을 진행하고 AST를 생성한다. 또 멈췄던 HTML을 파싱하고 완성하면 DOM트리가 완성된다. AST가 완성 된 DOM트리와 CSSOM트리에 영향을 주고 Render트리로 결합됩니다.</p>
+<h2 id="원시-타입과-객체-타입"><a href="#원시-타입과-객체-타입" class="headerlink" title="원시 타입과 객체 타입"></a>원시 타입과 객체 타입</h2><p>자바스크립트에서 원시타입은 변경 불가능한 값을 말합니다. 여기서 변경 불가능한 값이란 재할당과는 별개로 초기에 할당되어서 있던 주소에 새로운 값을 할당 못하고 새로운 주소를 할당해 재할당한다는 것을 말합니다. 이것을 pass by value라 하고, 객체 타입 즉 변경가능한 값은 이미 할당되어있는 주소에 새로운 값을 할당할 수 있다는 것을 말합니다. 이것을 pass by reference라 합니다.</p>
+<h2 id="함수-정의"><a href="#함수-정의" class="headerlink" title="함수 정의"></a>함수 정의</h2><h3 id="함수-선언문"><a href="#함수-선언문" class="headerlink" title="함수 선언문"></a>함수 선언문</h3><p>함수 선언문은 함수명을 식별자로 등록해 함수 표현식과 비슷하게 동작하지만, 함수표현식과는 다르게 함수 호이스팅이 일어납니다.</p>
+<h3 id="함수-표현식-1"><a href="#함수-표현식-1" class="headerlink" title="함수 표현식"></a>함수 표현식</h3><p>함수 표현식은 형태를 보면 변수의 선언과 할당이 이루어지는 것과 비슷하게 보입니다. 여기서 알 수 있듯이 함수 표현식은 변수 호이스팅이 일어납니다.</p>
+<h3 id="생성자-함수"><a href="#생성자-함수" class="headerlink" title="생성자 함수"></a>생성자 함수</h3><p>생성자 함수로 생성한 함수는 일반적인함수와 많이 달라 사용하지 않고, 클로저를 생성하지도 않습니다.</p>
+<h3 id="화살표-함수-1"><a href="#화살표-함수-1" class="headerlink" title="화살표 함수"></a>화살표 함수</h3><p>화살표 함수는 return문이 없어도 return문이 있는 것처럼 동작하고 일반 함수와 this바인딩이 달릅니다. 지금 리액트 공부를 하고 있는데 리액트 컴포넌트 에서는 상속문제 때문에 this가 달라져 꼭 화살표 함수를 사용해야 합니다.</p>
+<h2 id="스코프"><a href="#스코프" class="headerlink" title="스코프"></a>스코프</h2><p>식별자는 자신이 선언된 위치에서 스코프를 가지는데 이것을 렉시컬 스코프라 하고 스코프는 식별자의 유효범위를 말합니다. 스코프는 전역 스코프와 지역 스코프로 나뉘는데 전역스코프는 코드의 가장 바깥 영역을 말하여 전역에서 선언된 모든 식별자를 전역 스코프라 합니다. 지역 스코프는 함수레벨 스코프와 블록 레벨 스프로 나뉩다. 함수 레벨 스코프는 var키워드로 선언 된 변수는 반복문이나 조건문 같은 코드 블록 내부에서는 지역 스코프를 가지지 못하고 함수 코드 블록 내부에서만 지역 스코프를 가질 수 있는 것을 말합니다. 이러한 단점때문에 나온 것이 블록 레벨 스코프입니다. 이것은 let과 const로 선언 된 변수는 함수 코드블록 뿐 아니라 조건문과 반복문 같은 코드 블록 내에서도 지역 스코프를 가질 수 있다는 장점을 가지고 있습니다. 이러한 스코프 구조는 실행 컨텍스트의 렉시컬환경에서 만들어 지는데 외부렉시컬환경참조가 이어진 것을  스코프 체인이라 합니다!!</p>
+<h2 id="전역변수의-문제점"><a href="#전역변수의-문제점" class="headerlink" title="전역변수의 문제점"></a>전역변수의 문제점</h2><p>스코프체인의 종점에 존재하여 해당 식별자를 찾기까지 스코프 체인의 종점까지 올라가야합니다.</p>
+<p>전역변수는 코드 어디서는 참조와 할당이 가능하기 때문에 의도치 않은 오류와 할달을 불러일킬 수 있습니다. 이것을 암묵적 결합이라 합니다.</p>
+<p>자바스크립트는 파일을 분리해도 모듈화가 이루어 지지 않아 네임스페이스의 오염이 생길 수 있습니다.</p>
+<p>긴 생명주기를 가져 브라우져가 끝나기 전까지 소멸하지 않습니다.</p>
+<h2 id="var키워드의-문제점"><a href="#var키워드의-문제점" class="headerlink" title="var키워드의 문제점"></a>var키워드의 문제점</h2><p>변수의 중복 선언이 가능합니다. var키워드를 사용해서 선언을 두번해도 자바스크립트 엔진은 var키워드를 없는 것 처럼 동작해서 재할당이 이루어 집니다.</p>
+<p>블록레벨 스코프를 지원하지 않습니다. 함수코드블록 내부에서만 지역스코프를 갖기때문에 의도치 않은 오류를 불러올 수 있습니다.</p>
+<p>변수 호이스팅이 이루어집니다. 런타임이전에 선언과 초기화가 이루어져 참조가 가능합니다.</p>
+<p>이러한 문제점들을 해결하기 위해 나온 것이 let 과 const입니다. </p>
+<h2 id="프로토타입"><a href="#프로토타입" class="headerlink" title="프로토타입"></a>프로토타입</h2><p>프로토타입은 자바스크립트의 상속을 구현하기에 가장 중요한 개념입니다.</p>
+<p>생성자 함수로 생성한 인스턴스는 부모의 것을 상속받기 위해 부모의 프로토타입의 프로퍼티는 상속 받습니다.</p>
+<h2 id="this-1"><a href="#this-1" class="headerlink" title="this"></a>this</h2><p>this는 자기참조 변수입니다. this는 동적으로 바뀌는데 일반 함수는 window를 가리키고, 메서드로 호출하면 메서드를 호출한 객체를 this로 바인딩하고, 화살표함수의 this는 렉시컬 this입니다. 이외에 call, apply, bind가 있는데 call과 aplly는 this를 바인딩하면서 함수를 호출하고 bind는 this만 바인딩합니다. </p>
+<p>ajax</p>
+<h1 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h1><ul>
+<li>객체들이 서로 유기적 동작하는 프로그래밍 이론</li>
+<li>코드의 재사용성과 중복제거가 가장 큰 목적</li>
+</ul>
+<h2 id="추상화"><a href="#추상화" class="headerlink" title="추상화"></a>추상화</h2><ul>
+<li>목적과 관련이 없는 부분을 제거하여 필요한 부분만을 표현하기 위한 개념이다.</li>
+<li>객체들 공통된 특징을 파악해 정의해 놓은 설계 기법</li>
+</ul>
+<h2 id="캡슐화"><a href="#캡슐화" class="headerlink" title="캡슐화"></a>캡슐화</h2><ul>
+<li><p>정보은닉을 위해 사용한다.</p>
+</li>
+<li><p>접근 제어자</p>
+</li>
+<li><blockquote>
+<p>private       : 해당 클래스 내에서만 접근이 가능하다.</p>
+<p>public       :  내부와 외부에서 참조와 할당이 가능하다. (기본)</p>
+<p>protected       : 해당 클래스를 상속한 클래스에서 접근이 가능하다.</p>
+<p>static :</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="상속"><a href="#상속" class="headerlink" title="상속"></a>상속</h2><ul>
+<li>코드의 중복을 없애기 위함이다.</li>
+</ul>
+<h2 id="다형성"><a href="#다형성" class="headerlink" title="다형성"></a>다형성</h2><ul>
+<li>상속받은 속성에 대해, 자식 클래스에서 재정의가 가능하다. (오버라이딩)</li>
+</ul>
+<hr>
+<h1 id="실행-컨텍스트"><a href="#실행-컨텍스트" class="headerlink" title="실행 컨텍스트"></a>실행 컨텍스트</h1><ul>
+<li>식별자, 스코프, 호이스팅, 클로저 등의 동작 원리를 담고 있는 핵심 개념이자 관리자이다.</li>
+<li>실행 가능한 코드를 평가(선언문)하는 과정에서 실행 컨텍스트가 생성되고, 선언문을 제외한 코드가 순차적으로 실행된다. 이때 코드 실행에 필요한 정보를 싱행 컨텍스트에서 취득한다.</li>
+<li>실행 컨텍스트는 렉시컬환경을 가지고 있다. 이 렉시컬 환경에는 3가지 컴포넌트가 존재한다.</li>
+</ul>
+<h2 id="렉시컬-환경"><a href="#렉시컬-환경" class="headerlink" title="렉시컬 환경"></a>렉시컬 환경</h2><h3 id="환경레코드-EnvironmentRecord"><a href="#환경레코드-EnvironmentRecord" class="headerlink" title="환경레코드 (EnvironmentRecord)"></a>환경레코드 (EnvironmentRecord)</h3><p>스코프에 포함된 식별자를 등록하고 관리하는 저장소이다.</p>
+<h3 id="외부-렉시컬-환경에-대한-참조-Outer-Lexical-Environment-Reference"><a href="#외부-렉시컬-환경에-대한-참조-Outer-Lexical-Environment-Reference" class="headerlink" title="외부 렉시컬 환경에 대한 참조 (Outer Lexical Environment Reference)"></a>외부 렉시컬 환경에 대한 참조 (Outer Lexical Environment Reference)</h3><p>외부 렉시컬 환경을 가리키는 참조를 저장한다. 현재 실행되고 있는 실행 컨텍스트를 저장한다.</p>
+<p>이를 통해 단방향 링크드 리스트인 스코프 체인을 구현한다.</p>
+<h3 id="this-바인딩-This-Binding"><a href="#this-바인딩-This-Binding" class="headerlink" title="this 바인딩 (This Binding)"></a>this 바인딩 (This Binding)</h3><p>렉시컬 환경의 this에 바인딩된 객체를 나타낸다</p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -357,7 +416,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        62
+                        65
                     </p>
                 </div>
             </div>
@@ -367,7 +426,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        8
                     </p>
                 </div>
             </div>
@@ -377,7 +436,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        63
+                        64
                     </p>
                 </div>
             </div>
@@ -480,7 +539,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">19</span>
+                <span class="level-item tag">21</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Assignment/">
@@ -496,7 +555,7 @@
                 <span class="level-item">TIL</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">50</span>
+                <span class="level-item tag">53</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/TIL/HTML-CSS/">
@@ -512,7 +571,7 @@
                 <span class="level-item">JavaScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">28</span>
+                <span class="level-item tag">31</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/TIL/컴퓨터공학/">
@@ -534,7 +593,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.78px;">Algorithm</a> <a href="/tags/Angular/" style="font-size: 12.22px;">Angular</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15.56px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 16.67px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 18.89px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 14.44px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12.22px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TodoList/" style="font-size: 10px;">TodoList</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14.44px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11.11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11.11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/실행-컨텍스트/" style="font-size: 10px;">실행 컨텍스트</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11.11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터공학/" style="font-size: 12.22px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 18px;">Algorithm</a> <a href="/tags/Angular/" style="font-size: 13px;">Angular</a> <a href="/tags/Bubble-Sort/" style="font-size: 10px;">Bubble Sort</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/Codewars/" style="font-size: 15px;">Codewars</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Form/" style="font-size: 10px;">Form</a> <a href="/tags/HTML/" style="font-size: 17px;">HTML</a> <a href="/tags/Insertion-Sort/" style="font-size: 10px;">Insertion Sort</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/JavaScript/" style="font-size: 19px;">JavaScript</a> <a href="/tags/JavaSript/" style="font-size: 16px;">JavaSript</a> <a href="/tags/LeetCode/" style="font-size: 12px;">LeetCode</a> <a href="/tags/Math-PI/" style="font-size: 10px;">Math.PI</a> <a href="/tags/Math-ceil/" style="font-size: 10px;">Math.ceil</a> <a href="/tags/Math-random/" style="font-size: 10px;">Math.random</a> <a href="/tags/Merge-Sort/" style="font-size: 10px;">Merge Sort</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Selection-Sort/" style="font-size: 10px;">Selection Sort</a> <a href="/tags/String-indexOf/" style="font-size: 10px;">String.indexOf</a> <a href="/tags/String-replace/" style="font-size: 10px;">String.replace</a> <a href="/tags/String-substring/" style="font-size: 10px;">String.substring</a> <a href="/tags/TIL/" style="font-size: 20px;">TIL</a> <a href="/tags/TodoList/" style="font-size: 10px;">TodoList</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/linear-gradient/" style="font-size: 10px;">linear-gradient</a> <a href="/tags/this/" style="font-size: 10px;">this</a> <a href="/tags/toString/" style="font-size: 10px;">toString</a> <a href="/tags/white-space/" style="font-size: 10px;">white-space</a> <a href="/tags/가상요소-선택자/" style="font-size: 10px;">가상요소 선택자</a> <a href="/tags/개념정리/" style="font-size: 10px;">개념정리</a> <a href="/tags/객체/" style="font-size: 10px;">객체</a> <a href="/tags/객체-리터럴/" style="font-size: 10px;">객체 리터럴</a> <a href="/tags/고차함수/" style="font-size: 10px;">고차함수</a> <a href="/tags/기초-알고리즘/" style="font-size: 10px;">기초 알고리즘</a> <a href="/tags/데이터-타입/" style="font-size: 10px;">데이터 타입</a> <a href="/tags/러버덕/" style="font-size: 14px;">러버덕</a> <a href="/tags/모듈/" style="font-size: 10px;">모듈</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 11px;">변수</a> <a href="/tags/변수의-생명주기/" style="font-size: 10px;">변수의 생명주기</a> <a href="/tags/별찍기/" style="font-size: 10px;">별찍기</a> <a href="/tags/복습/" style="font-size: 10px;">복습</a> <a href="/tags/생성자-함수/" style="font-size: 11px;">생성자 함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/시작/" style="font-size: 10px;">시작</a> <a href="/tags/실행-컨텍스트/" style="font-size: 10px;">실행 컨텍스트</a> <a href="/tags/애니메이션/" style="font-size: 10px;">애니메이션</a> <a href="/tags/연습문제/" style="font-size: 10px;">연습문제</a> <a href="/tags/예습/" style="font-size: 11px;">예습</a> <a href="/tags/원시-값/" style="font-size: 10px;">원시 값</a> <a href="/tags/웹-브라우저/" style="font-size: 10px;">웹 브라우저</a> <a href="/tags/웹-사이트/" style="font-size: 10px;">웹 사이트</a> <a href="/tags/웹-접근성/" style="font-size: 10px;">웹 접근성</a> <a href="/tags/웹-표준/" style="font-size: 10px;">웹 표준</a> <a href="/tags/제어문/" style="font-size: 10px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/컴퓨터-공학/" style="font-size: 11px;">컴퓨터 공학</a> <a href="/tags/컴퓨터공학/" style="font-size: 12px;">컴퓨터공학</a> <a href="/tags/클래스/" style="font-size: 10px;">클래스</a> <a href="/tags/키워드/" style="font-size: 10px;">키워드</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
     </div>
 </div>
 
@@ -548,6 +607,63 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/07/10/til-20190710/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190710">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-10T01:20:47.000Z">2019-07-10</time></div>
+                    <a href="/2019/07/10/til-20190710/" class="has-link-black-ter is-size-6">til-20190710</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/03/til-20190703/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 Angular Forms">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T15:00:00.000Z">2019-07-03</time></div>
+                    <a href="/2019/07/03/til-20190703/" class="has-link-black-ter is-size-6">정리중 Angular Forms</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/25/til-20190624/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190625">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-24T15:00:00.000Z">2019-06-25</time></div>
+                    <a href="/2019/06/25/til-20190624/" class="has-link-black-ter is-size-6">til-20190625</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -587,63 +703,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/18/til-20190619/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Template Reference Variable, Interection)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/til-20190619/" class="has-link-black-ter is-size-6">Angular Component(Template Reference Variable, Interection)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/18/til-20190617/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Built-in-directive)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/til-20190617/" class="has-link-black-ter is-size-6">Angular Component(Built-in-directive)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/14/til-20190614/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -657,12 +716,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/06/">
                 <span class="level-start">
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -723,14 +793,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Angular/">
                         <span class="tag">Angular</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -744,7 +814,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -772,7 +842,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">12</span>
+                        <span class="tag is-grey">14</span>
                     </a>
                 </div>
                 
@@ -800,7 +870,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaSript/">
                         <span class="tag">JavaSript</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -877,7 +947,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">51</span>
+                        <span class="tag is-grey">54</span>
                     </a>
                 </div>
                 
@@ -1116,6 +1186,13 @@
                     <a class="tags has-addons" href="/tags/조건문/">
                         <span class="tag">조건문</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터-공학/">
+                        <span class="tag">컴퓨터 공학</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1179,6 +1256,63 @@
         
         <article class="media">
             
+            <a href="/2019/07/10/til-20190710/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190710">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-10T01:20:47.000Z">2019-07-10</time></div>
+                    <a href="/2019/07/10/til-20190710/" class="has-link-black-ter is-size-6">til-20190710</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/03/til-20190703/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="정리중 Angular Forms">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T15:00:00.000Z">2019-07-03</time></div>
+                    <a href="/2019/07/03/til-20190703/" class="has-link-black-ter is-size-6">정리중 Angular Forms</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/25/til-20190624/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190625">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-24T15:00:00.000Z">2019-06-25</time></div>
+                    <a href="/2019/06/25/til-20190624/" class="has-link-black-ter is-size-6">til-20190625</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/06/20/til-20190620/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/chockchock.jpg" alt="til-20190620">
@@ -1215,63 +1349,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/18/til-20190619/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Template Reference Variable, Interection)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/til-20190619/" class="has-link-black-ter is-size-6">Angular Component(Template Reference Variable, Interection)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/18/til-20190617/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular Component(Built-in-directive)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:00:00.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/til-20190617/" class="has-link-black-ter is-size-6">Angular Component(Built-in-directive)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/14/til-20190614/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/chockchock.jpg" alt="Angular 장점, Component 기본">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T15:00:00.000Z">2019-06-14</time></div>
-                    <a href="/2019/06/14/til-20190614/" class="has-link-black-ter is-size-6">Angular 장점, Component 기본</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/TIL/">TIL</a> / <a class="has-link-grey -link" href="/categories/TIL/JavaScript/">JavaScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1285,12 +1362,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/06/">
                 <span class="level-start">
                     <span class="level-item">6월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -1351,14 +1439,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Angular/">
                         <span class="tag">Angular</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1372,7 +1460,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1400,7 +1488,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HTML/">
                         <span class="tag">HTML</span>
-                        <span class="tag is-grey">12</span>
+                        <span class="tag is-grey">14</span>
                     </a>
                 </div>
                 
@@ -1428,7 +1516,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaSript/">
                         <span class="tag">JavaSript</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -1505,7 +1593,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TIL/">
                         <span class="tag">TIL</span>
-                        <span class="tag is-grey">51</span>
+                        <span class="tag is-grey">54</span>
                     </a>
                 </div>
                 
@@ -1744,6 +1832,13 @@
                     <a class="tags has-addons" href="/tags/조건문/">
                         <span class="tag">조건문</span>
                         <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/컴퓨터-공학/">
+                        <span class="tag">컴퓨터 공학</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
